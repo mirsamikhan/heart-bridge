@@ -366,7 +366,7 @@ export default function HomePage() {
                   asChild 
                   className="w-full bg-white text-accent-darker-blue hover:bg-secondary font-bold text-lg py-6 rounded-xl"
                 >
-                  <Link to="/volunteer">Apply Now</Link>
+                  <a href="https://forms.gle/JXHtZA6EsWVceng5A" target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </motion.div>
             ))}
