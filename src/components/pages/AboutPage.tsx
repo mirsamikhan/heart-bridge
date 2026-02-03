@@ -267,6 +267,41 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Leadership */}
+      <section className="w-full py-20 md:py-28 bg-background">
+        <div className="max-w-[100rem] mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-heading text-3xl md:text-5xl text-primary text-center mb-16"
+          >
+            Leadership
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <div className="bg-secondary rounded-3xl p-8 md:p-12">
+              <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-2">
+                Mir Sami Khan
+              </h3>
+              <p className="font-paragraph text-lg text-primary font-semibold mb-6">
+                Project Director
+              </p>
+              <p className="font-paragraph text-base text-foreground leading-relaxed">
+                Mir Sami Khan leads the DilSe initiative, bringing vision and expertise to our mission of advancing cardiovascular health in South Asian communities across the Dallas–Fort Worth area.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Important Note */}
       <section className="w-full py-20 md:py-28">
         <div className="max-w-[100rem] mx-auto px-6">
