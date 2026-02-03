@@ -131,8 +131,8 @@ export default function HomePage() {
                 UT SOUTHWESTERN COLLABORATION
               </span>
               <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6">
-                Community-Based <br/>
-                <span className="text-secondary">Heart & Brain Health</span>
+                DilSe: <br/>
+                <span className="text-secondary">South Asian Heart & Brain Program</span>
               </h1>
               <p className="text-lg md:text-2xl text-primary-foreground/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
                 Addressing the elevated cardiovascular risk among South Asians through early screening, education, and longitudinal support.
