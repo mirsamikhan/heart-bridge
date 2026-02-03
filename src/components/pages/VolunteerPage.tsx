@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Users, Phone, Award, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BaseCrudService } from '@/integrations';
@@ -331,11 +330,11 @@ export default function VolunteerPage() {
               Join our team of volunteers and help improve cardiovascular health in South Asian communities.
             </p>
             <Button 
-              asChild 
               size="lg"
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
+              onClick={() => window.open('https://forms.gle/JXHtZA6EsWVceng5A', '_blank')}
             >
-              <Link to="/contact">Apply to Volunteer</Link>
+              Apply to Volunteer
             </Button>
           </motion.div>
         </div>
