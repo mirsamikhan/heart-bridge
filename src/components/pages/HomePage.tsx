@@ -1,5 +1,5 @@
 // HPI 1.7-V
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -12,7 +12,9 @@ import {
   Calendar, 
   ArrowRight, 
   CheckCircle2,
-  ClipboardList
+  ClipboardList,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
@@ -87,8 +89,30 @@ const SERVICE_AREAS = [
   }
 ];
 
+const SLIDESHOW_IMAGES = [
+  {
+    src: "https://static.wixstatic.com/media/b1d366_8435298bc689479fa8c1154b30627529~mv2.png?originWidth=960&originHeight=1152",
+    alt: "Community health screening"
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_fce7820249184fd78f57915b0fe6d58d~mv2.png?originWidth=960&originHeight=1152",
+    alt: "Health education session"
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_94eb3812ad764c7fbab6d9c4d507b56e~mv2.png?originWidth=960&originHeight=1152",
+    alt: "Volunteer support"
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_df3ec4b37f234c5b8febe020dd18fc64~mv2.png?originWidth=960&originHeight=1152",
+    alt: "Community gathering"
+  }
+];
+
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
@@ -96,6 +120,31 @@ export default function HomePage() {
 
   const yParallax = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+
+  // Auto-advance slideshow
+  useEffect(() => {
+    let interval: NodeJS.Timeout | undefined;
+    
+    if (autoPlay) {
+      interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % SLIDESHOW_IMAGES.length);
+      }, 5000);
+    }
+    
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [autoPlay]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % SLIDESHOW_IMAGES.length);
+    setAutoPlay(false);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + SLIDESHOW_IMAGES.length) % SLIDESHOW_IMAGES.length);
+    setAutoPlay(false);
+  };
 
   return (
     <div ref={containerRef} className="min-h-screen bg-background font-paragraph overflow-clip selection:bg-primary selection:text-white">
@@ -197,9 +246,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* --- PHOTO SLIDESHOW SECTION --- */}
+      {/* Design: Full-width immersive slideshow with navigation controls */}
+      <section className="w-full py-24 md:py-32 bg-background relative z-10 -mt-12 pt-12">
+        <div className="max-w-[100rem] mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="font-heading text-4xl md:text-6xl text-primary mb-6">
+              Our Community in Action
+            </h2>
+            <p className="text-xl text-foreground/70">
+              Discover the impact of DilSe through our community events and health initiatives.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative group"
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
+          >
+            {/* Slideshow Container */}
+            <div className="relative w-full aspect-[16/9] rounded-[2.5rem] overflow-hidden shadow-2xl bg-foreground/5">
+              {/* Images */}
+              <div className="relative w-full h-full">
+                {SLIDESHOW_IMAGES.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Navigation Buttons */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+
+              {/* Slide Indicators */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                {SLIDESHOW_IMAGES.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setCurrentSlide(index);
+                      setAutoPlay(false);
+                    }}
+                    className={`transition-all duration-300 rounded-full ${
+                      index === currentSlide
+                        ? 'bg-white w-8 h-2'
+                        : 'bg-white/50 hover:bg-white/75 w-2 h-2'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* --- KEY STATS SECTION --- */}
       {/* Design: Clean, high-contrast strip. Light blue background. */}
-      <section className="w-full bg-secondary py-20 md:py-24 relative z-10 -mt-12 pt-32">
+      <section className="w-full bg-secondary py-20 md:py-24 relative z-10">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
             {STATS_DATA.map((stat, index) => (
@@ -371,6 +503,89 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* --- PHOTO SLIDESHOW SECTION --- */}
+      {/* Design: Full-width immersive slideshow with navigation controls */}
+      <section className="w-full py-24 md:py-32 bg-background">
+        <div className="max-w-[100rem] mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="font-heading text-4xl md:text-6xl text-primary mb-6">
+              Our Community in Action
+            </h2>
+            <p className="text-xl text-foreground/70">
+              Discover the impact of DilSe through our community events and health initiatives.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative group"
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
+          >
+            {/* Slideshow Container */}
+            <div className="relative w-full aspect-[16/9] rounded-[2.5rem] overflow-hidden shadow-2xl bg-foreground/5">
+              {/* Images */}
+              <div className="relative w-full h-full">
+                {SLIDESHOW_IMAGES.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Navigation Buttons */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+
+              {/* Slide Indicators */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                {SLIDESHOW_IMAGES.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setCurrentSlide(index);
+                      setAutoPlay(false);
+                    }}
+                    className={`transition-all duration-300 rounded-full ${
+                      index === currentSlide
+                        ? 'bg-white w-8 h-2'
+                        : 'bg-white/50 hover:bg-white/75 w-2 h-2'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
