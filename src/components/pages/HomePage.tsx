@@ -327,7 +327,7 @@ export default function HomePage() {
             {/* Slideshow Container */}
             <div className="relative w-full aspect-[16/9] rounded-[2.5rem] overflow-hidden shadow-2xl bg-foreground/5">
               {/* Images */}
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full p-0 border border-solid border-black">
                 {SLIDESHOW_IMAGES.map((image, index) => (
                   <motion.div
                     key={index}
