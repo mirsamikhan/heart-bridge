@@ -1,6 +1,6 @@
 // HPI 1.7-V
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
@@ -23,6 +23,8 @@ import Footer from '@/components/Footer';
 
 // --- Canonical Data Sources ---
 // Preserving and structuring the static content from the original file and brief.
+
+
 
 const STATS_DATA = [
   { 
