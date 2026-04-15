@@ -121,24 +121,12 @@ const SERVICE_AREAS = [
 
 const SLIDESHOW_IMAGES = [
   {
-    src: "https://static.wixstatic.com/media/b1d366_8435298bc689479fa8c1154b30627529~mv2.png?originWidth=960&originHeight=1152",
-    alt: "Community health screening"
+    src: "https://static.wixstatic.com/media/b1d366_0daff48ec47e414098e41b116cfffeba~mv2.jpeg",
+    alt: "Community health screening event"
   },
   {
-    src: "https://static.wixstatic.com/media/b1d366_fce7820249184fd78f57915b0fe6d58d~mv2.png?originWidth=960&originHeight=1152",
-    alt: "Health education session"
-  },
-  {
-    src: "https://static.wixstatic.com/media/b1d366_94eb3812ad764c7fbab6d9c4d507b56e~mv2.png?originWidth=960&originHeight=1152",
-    alt: "Volunteer support"
-  },
-  {
-    src: "https://static.wixstatic.com/media/b1d366_df3ec4b37f234c5b8febe020dd18fc64~mv2.png?originWidth=960&originHeight=1152",
-    alt: "Community gathering"
-  },
-  {
-    src: "https://static.wixstatic.com/media/b1d366_e91e364c82b241af855eab6d1f9d18c3~mv2.png",
-    alt: "DilSe community health event"
+    src: "https://static.wixstatic.com/media/b1d366_ad8faaddea9744c8aaf4357a2379ba17~mv2.jpeg",
+    alt: "Community members receiving care"
   }
 ];
 
