@@ -135,6 +135,10 @@ const SLIDESHOW_IMAGES = [
   {
     src: "https://static.wixstatic.com/media/b1d366_df3ec4b37f234c5b8febe020dd18fc64~mv2.png?originWidth=960&originHeight=1152",
     alt: "Community gathering"
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_e91e364c82b241af855eab6d1f9d18c3~mv2.png",
+    alt: "DilSe community health event"
   }
 ];
 
