@@ -255,8 +255,8 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                   originWidth={4032}
                   originHeight={3024}
-                  focalPointX={51.17807539682539}
-                  focalPointY={18.248456790123456} />
+                  focalPointX={48.64457831325305}
+                  focalPointY={9.63855421686747} />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent mix-blend-multiply"></div>
                 
                 {/* Floating Badge */}
