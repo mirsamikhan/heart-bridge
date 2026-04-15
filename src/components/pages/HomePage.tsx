@@ -16,6 +16,34 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
+
+// Slideshow images
+const HERO_SLIDESHOW_IMAGES = [
+  {
+    src: "https://static.wixstatic.com/media/b1d366_0daff48ec47e414098e41b116cfffeba~mv2.jpeg",
+    alt: "Community health screening event",
+    originWidth: 4032,
+    originHeight: 3024,
+    focalPointX: 51.17807539682539,
+    focalPointY: 18.248456790123456
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_0daff48ec47e414098e41b116cfffeba~mv2.jpeg",
+    alt: "Healthcare volunteers in action",
+    originWidth: 4032,
+    originHeight: 3024,
+    focalPointX: 51.17807539682539,
+    focalPointY: 18.248456790123456
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_0daff48ec47e414098e41b116cfffeba~mv2.jpeg",
+    alt: "Community members receiving care",
+    originWidth: 4032,
+    originHeight: 3024,
+    focalPointX: 51.17807539682539,
+    focalPointY: 18.248456790123456
+  }
+];
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
