@@ -149,7 +149,6 @@ export default function HomePage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-background font-paragraph overflow-clip selection:bg-primary selection:text-white">
       <Header />
-
       {/* --- HERO SECTION --- */}
       {/* Design: Full bleed, deep medical blue, academic authority. */}
       <section className="relative w-full min-h-[95vh] flex items-center justify-center bg-primary overflow-hidden rounded-b-[3rem] md:rounded-b-[5rem] z-20 shadow-xl">
@@ -221,15 +220,17 @@ export default function HomePage() {
               className="relative z-10"
             >
               <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white/10">
-                <Image 
-                  src="https://static.wixstatic.com/media/b1d366_0b1aa50d95f7467b8561dc9f29263a85~mv2.png?originWidth=768&originHeight=960" 
-                  alt="Doctor consulting with patient" 
+                <Image
+                  src="https://static.wixstatic.com/media/b1d366_0daff48ec47e414098e41b116cfffeba~mv2.jpeg"
                   className="w-full h-full object-cover"
-                />
+                  originWidth={4032}
+                  originHeight={3024}
+                  focalPointX={51.17807539682539}
+                  focalPointY={18.248456790123456} />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent mix-blend-multiply"></div>
                 
                 {/* Floating Badge */}
-                <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-lg">
+                <div className="absolute bottom-8 left-8 right-8 backdrop-blur-md rounded-2xl shadow-lg border-0 border-solid border-gray-200 bg-[#FFFFFFF2] p-[15px]">
                   <div className="flex items-center gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <Heart className="w-6 h-6 text-primary fill-primary" />
@@ -245,9 +246,34 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- PHOTO SLIDESHOW SECTION --- */}
       {/* Design: Full-width immersive slideshow with navigation controls */}
+      <section className="w-full bg-secondary py-20 md:py-24 relative z-10">
+        <div className="max-w-[100rem] mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
+            {STATS_DATA.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="flex flex-col md:flex-row items-start md:items-center gap-6 group"
+              >
+                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white flex items-center justify-center shadow-inner border-4 border-white/50 group-hover:scale-105 transition-transform duration-500">
+                  <span className="font-heading text-4xl md:text-5xl font-bold text-primary">{stat.value}</span>
+                </div>
+                <div>
+                  <h3 className="font-heading text-3xl text-secondary-foreground mb-2">{stat.label}</h3>
+                  <p className="text-lg text-foreground/80 leading-relaxed max-w-md">
+                    {stat.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="w-full py-24 md:py-32 bg-background relative z-10 -mt-12 pt-12">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -328,36 +354,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* --- KEY STATS SECTION --- */}
       {/* Design: Clean, high-contrast strip. Light blue background. */}
-      <section className="w-full bg-secondary py-20 md:py-24 relative z-10">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
-            {STATS_DATA.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="flex flex-col md:flex-row items-start md:items-center gap-6 group"
-              >
-                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white flex items-center justify-center shadow-inner border-4 border-white/50 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-heading text-4xl md:text-5xl font-bold text-primary">{stat.value}</span>
-                </div>
-                <div>
-                  <h3 className="font-heading text-3xl text-secondary-foreground mb-2">{stat.label}</h3>
-                  <p className="text-lg text-foreground/80 leading-relaxed max-w-md">
-                    {stat.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* --- MISSION & ABOUT SECTION --- */}
       {/* Design: Split layout with sticky image. Academic yet approachable. */}
       <section className="w-full py-24 md:py-32 bg-background relative">
@@ -435,7 +433,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- VOLUNTEER OPPORTUNITIES (Flyer Replica) --- */}
       {/* Design: Dark blue background, white text, split columns. Matches the "Positions Available" section. */}
       <section className="w-full py-24 bg-accent-darker-blue text-white relative overflow-hidden">
@@ -505,7 +502,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- PHOTO SLIDESHOW SECTION --- */}
       {/* Design: Full-width immersive slideshow with navigation controls */}
       <section className="w-full py-24 md:py-32 bg-background">
@@ -588,7 +584,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* --- SERVICES & PATHWAYS --- */}
       {/* Design: Light, airy, card-based grid. */}
       <section className="w-full py-24 md:py-32 bg-background">
@@ -626,7 +621,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- CTA SECTION --- */}
       {/* Design: Full width image background with overlay. Emotional connection. */}
       <section className="w-full py-32 relative overflow-hidden">
@@ -674,7 +668,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
