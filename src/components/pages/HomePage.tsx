@@ -127,6 +127,10 @@ const SLIDESHOW_IMAGES = [
   {
     src: "https://static.wixstatic.com/media/b1d366_ad8faaddea9744c8aaf4357a2379ba17~mv2.jpeg",
     alt: "Community members receiving care"
+  },
+  {
+    src: "https://static.wixstatic.com/media/b1d366_84b0b4878af54c5a86368d7c516b7e63~mv2.jpeg",
+    alt: "Healthcare volunteers in action"
   }
 ];
 
@@ -445,7 +449,9 @@ export default function HomePage() {
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${
+                        index === 1 ? 'object-top' : 'object-center'
+                      }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
                   </motion.div>
