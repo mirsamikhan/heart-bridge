@@ -72,10 +72,10 @@ export default function GetScreenedPage() {
                 <Heart className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-4">
-                Blood Pressure Check
+                Health Screenings for Cardiovascular Risk Factors
               </h3>
               <p className="font-paragraph text-base text-foreground">
-                Free blood pressure screening conducted by trained volunteers.
+                Free health screenings for cardiovascular risk factors conducted by trained volunteers.
               </p>
             </motion.div>
 
@@ -119,10 +119,10 @@ export default function GetScreenedPage() {
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Blood Pressure Measurement
+                      Health Screenings for Cardiovascular Risk Factors
                     </h3>
                     <p className="font-paragraph text-base text-foreground">
-                      Accurate blood pressure reading using calibrated equipment
+                      Comprehensive health screenings for cardiovascular risk factors using calibrated equipment
                     </p>
                   </div>
                 </div>

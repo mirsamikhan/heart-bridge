@@ -83,10 +83,10 @@ export default function ContactPage() {
                       Email Us
                     </h3>
                     <a 
-                      href="mailto:DILSE@outlook.com"
+                      href="mailto:DilSeDFW@outlook.com"
                       className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
                     >
-                      DILSE@outlook.com
+                      DilSeDFW@outlook.com
                     </a>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ export default function ContactPage() {
                   How do I volunteer with DilSe?
                 </h3>
                 <p className="font-paragraph text-base text-foreground leading-relaxed">
-                  Send us an email at DILSE@outlook.com with your interest in volunteering. Include your availability, any relevant experience, and whether you're interested in in-person or remote opportunities. We'll respond with next steps and training information.
+                  Send us an email at DilSeDFW@outlook.com with your interest in volunteering. Include your availability, any relevant experience, and whether you're interested in in-person or remote opportunities. We'll respond with next steps and training information.
                 </p>
               </div>
 

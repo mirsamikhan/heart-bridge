@@ -212,10 +212,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Conduct Blood Pressure Screenings
+                      Health Screenings for Cardiovascular Risk Factors
                     </h3>
                     <p className="font-paragraph text-base text-foreground">
-                      Offer free, walk-up blood pressure checks and cardiovascular risk assessments
+                      Offer free, walk-up health screenings for cardiovascular risk factors and risk assessments
                     </p>
                   </div>
                 </div>

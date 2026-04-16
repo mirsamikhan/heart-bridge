@@ -180,7 +180,7 @@ export default function ResourcesPage() {
                     </div>
                     <div>
                       <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Understanding Blood Pressure
+                        Health Screenings for Cardiovascular Risk Factors
                       </h3>
                       <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
                         Heart Health Basics
