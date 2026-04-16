@@ -437,21 +437,19 @@ export default function HomePage() {
             {/* Slideshow Container */}
             <div className="relative w-full aspect-[16/9] rounded-[2.5rem] overflow-hidden shadow-2xl bg-foreground/5">
               {/* Images */}
-              <div className="relative w-full h-full p-0 border border-solid border-black">
+              <div className="relative w-full h-full overflow-hidden">
                 {SLIDESHOW_IMAGES.map((image, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: index === currentSlide ? 1 : 0 }}
                     transition={{ duration: 0.8 }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 w-full h-full"
                   >
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      className={`w-full h-full object-cover ${
-                        index === 1 ? 'object-top' : 'object-center'
-                      }`}
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
                   </motion.div>
