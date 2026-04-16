@@ -70,9 +70,7 @@ export default function Footer() {
             <p className="font-paragraph text-sm opacity-90 leading-relaxed">
               <strong>Important Information:</strong> DilSe provides education and screening support and does not replace medical care. Volunteers do not provide medical advice.
             </p>
-            <p className="font-paragraph text-sm opacity-90 leading-relaxed">
-              Participation is free and optional. Data may be used in de-identified form for public health research.
-            </p>
+
           </div>
 
           {/* Copyright */}

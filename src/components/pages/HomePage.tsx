@@ -450,7 +450,8 @@ export default function HomePage() {
                       src={image.src}
                       alt={image.alt}
                       className="w-full h-full object-cover"
-                    />
+                      focalPointX={51.606425702811244}
+                      focalPointY={14.457831325301203} />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
                   </motion.div>
                 ))}
