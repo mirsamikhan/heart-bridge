@@ -296,7 +296,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="w-full py-24 md:py-32 bg-background relative z-10 -mt-12 pt-12">
+      <section className="w-full py-12 md:py-16 bg-background relative z-10 -mt-12 pt-12">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-heading text-4xl md:text-6xl text-primary mb-6">
