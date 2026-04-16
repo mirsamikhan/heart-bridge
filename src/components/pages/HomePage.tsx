@@ -197,9 +197,7 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <span className="inline-block py-2 px-4 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
-                UT SOUTHWESTERN COLLABORATION
-              </span>
+
               <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6">
                 DilSe: <br/>
                 <span className="text-secondary">South Asian Heart & Brain Program</span>
@@ -296,6 +294,122 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* --- KEY STATS SECTION --- */}
+      {/* Design: Clean, high-contrast strip. Light blue background. */}
+      {/* --- MISSION & ABOUT SECTION --- */}
+      {/* Design: Split layout with sticky image. Academic yet approachable. */}
+      <section className="w-full py-24 md:py-32 bg-background relative">
+        <div className="max-w-[100rem] mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            
+            {/* Sticky Image Side */}
+            <div className="relative lg:sticky lg:top-32 h-fit order-2 lg:order-1">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="https://static.wixstatic.com/media/b1d366_e91e364c82b241af855eab6d1f9d18c3~mv2.png"
+                    className="w-full h-full object-cover"
+                    originWidth={2262}
+                    originHeight={1302}
+                    focalPointX={47.45762711864407}
+                    focalPointY={47.05537764586423} />
+                </div>
+                {/* Decorative Element */}
+                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary rounded-full -z-10 opacity-50"></div>
+                <div className="absolute -top-10 -left-10 w-24 h-24 border-4 border-primary rounded-full -z-10 opacity-20"></div>
+              </motion.div>
+            </div>
+
+            {/* Content Side */}
+            <div className="order-1 lg:order-2 space-y-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="font-heading text-4xl md:text-6xl text-primary mb-8">
+                  About DilSe
+                </h2>
+                <p className="text-xl text-foreground/80 leading-relaxed mb-8">
+                  The <strong className="text-primary">DilSe South Asian Heart & Brain Program</strong>, developed in collaboration with UT Southwestern physicians, works to address the elevated cardiovascular risk among South Asians through early screening and education.
+                </p>
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  Volunteers serve at weekly health sites to provide health education, conduct blood pressure screenings, offer follow-up support, and contribute to research projects.
+                </p>
+              </motion.div>
+
+              <div className="space-y-6">
+                <h3 className="font-heading text-2xl text-secondary-foreground border-b border-secondary pb-2 inline-block">
+                  Our Core Objectives
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Provide cardiovascular health education",
+                    "Conduct blood pressure screenings",
+                    "Identify individuals at increased cardiovascular risk",
+                    "Enroll participants into longitudinal follow-up support",
+                    "Contribute to public health research"
+                  ].map((item, i) => (
+                    <motion.li 
+                      key={i}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.1 }}
+                      className="flex items-start gap-3"
+                    >
+                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-lg text-foreground">{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-24 md:py-32 bg-secondary-foreground">
+        <div className="max-w-[100rem] mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="font-heading text-4xl md:text-6xl mb-6 text-primary-foreground">
+              How We Serve the Community
+            </h2>
+            <p className="text-xl text-secondary">
+              Comprehensive support designed to be accessible, culturally relevant, and effective.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {SERVICE_AREAS.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group hover:bg-secondary/50 rounded-[2rem] p-8 transition-all duration-300 hover:-translate-y-2 bg-primary-foreground"
+              >
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 bg-secondary">
+                  <div className="text-primary">
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="font-heading text-2xl text-primary mb-3">{service.title}</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  {service.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="w-full py-12 md:py-16 bg-background relative z-10 -mt-12 pt-12">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -376,85 +490,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-      {/* --- KEY STATS SECTION --- */}
-      {/* Design: Clean, high-contrast strip. Light blue background. */}
-      {/* --- MISSION & ABOUT SECTION --- */}
-      {/* Design: Split layout with sticky image. Academic yet approachable. */}
-      <section className="w-full py-24 md:py-32 bg-background relative">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            
-            {/* Sticky Image Side */}
-            <div className="relative lg:sticky lg:top-32 h-fit order-2 lg:order-1">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative"
-              >
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                  <Image 
-                    src="https://static.wixstatic.com/media/b1d366_f039a48bb0f3425dbaf73004c2c0ca41~mv2.png?originWidth=960&originHeight=704" 
-                    alt="Community health outreach" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Decorative Element */}
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary rounded-full -z-10 opacity-50"></div>
-                <div className="absolute -top-10 -left-10 w-24 h-24 border-4 border-primary rounded-full -z-10 opacity-20"></div>
-              </motion.div>
-            </div>
-
-            {/* Content Side */}
-            <div className="order-1 lg:order-2 space-y-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="font-heading text-4xl md:text-6xl text-primary mb-8">
-                  About DilSe
-                </h2>
-                <p className="text-xl text-foreground/80 leading-relaxed mb-8">
-                  The <strong className="text-primary">DilSe South Asian Heart & Brain Program</strong>, developed in collaboration with UT Southwestern physicians, works to address the elevated cardiovascular risk among South Asians through early screening and education.
-                </p>
-                <p className="text-lg text-foreground/70 leading-relaxed">
-                  Volunteers serve at weekly health sites to provide health education, conduct blood pressure screenings, offer follow-up support, and contribute to research projects.
-                </p>
-              </motion.div>
-
-              <div className="space-y-6">
-                <h3 className="font-heading text-2xl text-secondary-foreground border-b border-secondary pb-2 inline-block">
-                  Our Core Objectives
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    "Provide cardiovascular health education",
-                    "Conduct blood pressure screenings",
-                    "Identify individuals at increased cardiovascular risk",
-                    "Enroll participants into longitudinal follow-up support",
-                    "Contribute to public health research"
-                  ].map((item, i) => (
-                    <motion.li 
-                      key={i}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: i * 0.1 }}
-                      className="flex items-start gap-3"
-                    >
-                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-lg text-foreground">{item}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* --- VOLUNTEER OPPORTUNITIES (Flyer Replica) --- */}
       {/* Design: Dark blue background, white text, split columns. Matches the "Positions Available" section. */}
       <section className="w-full py-24 bg-accent-darker-blue text-white relative overflow-hidden">
@@ -526,123 +561,8 @@ export default function HomePage() {
       </section>
       {/* --- PHOTO SLIDESHOW SECTION --- */}
       {/* Design: Full-width immersive slideshow with navigation controls */}
-      <section className="w-full py-24 md:py-32 bg-background">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-4xl md:text-6xl text-primary mb-6">
-              Our Community in Action
-            </h2>
-            <p className="text-xl text-foreground/70">
-              Discover the impact of DilSe through our community events and health initiatives.
-            </p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative group"
-            onMouseEnter={() => setAutoPlay(false)}
-            onMouseLeave={() => setAutoPlay(true)}
-          >
-            {/* Slideshow Container */}
-            <div className="relative w-full aspect-[16/9] rounded-[2.5rem] overflow-hidden shadow-2xl bg-foreground/5">
-              {/* Images */}
-              <div className="relative w-full h-full">
-                {SLIDESHOW_IMAGES.map((image, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: index === currentSlide ? 1 : 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
-
-              {/* Slide Indicators */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-                {SLIDESHOW_IMAGES.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setCurrentSlide(index);
-                      setAutoPlay(false);
-                    }}
-                    className={`transition-all duration-300 rounded-full ${
-                      index === currentSlide
-                        ? 'bg-white w-8 h-2'
-                        : 'bg-white/50 hover:bg-white/75 w-2 h-2'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
       {/* --- SERVICES & PATHWAYS --- */}
       {/* Design: Light, airy, card-based grid. */}
-      <section className="w-full py-24 md:py-32 bg-background">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="font-heading text-4xl md:text-6xl text-primary mb-6">
-              How We Serve the Community
-            </h2>
-            <p className="text-xl text-foreground/70">
-              Comprehensive support designed to be accessible, culturally relevant, and effective.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICE_AREAS.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-secondary/30 hover:bg-secondary/50 rounded-[2rem] p-8 transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-primary">
-                    {service.icon}
-                  </div>
-                </div>
-                <h3 className="font-heading text-2xl text-primary mb-3">{service.title}</h3>
-                <p className="text-foreground/80 leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* --- CTA SECTION --- */}
       {/* Design: Full width image background with overlay. Emotional connection. */}
       <section className="w-full py-32 relative overflow-hidden">
