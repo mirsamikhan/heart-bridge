@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail } from 'lucide-react';
+import { Mail, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -56,6 +56,15 @@ export default function Footer() {
                 className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity"
               >
                 DilSeDFW@outlook.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2 mb-6">
+              <MessageSquare className="w-5 h-5" />
+              <a
+                href="sms:+1XXXXXXXXXX"
+                className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity"
+              >
+                Text Us: (XXX) XXX-XXXX
               </a>
             </div>
             <p className="font-paragraph text-sm opacity-90 leading-relaxed">

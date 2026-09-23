@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -92,6 +92,28 @@ export default function ContactPage() {
                 </div>
                 <p className="font-paragraph text-base text-foreground leading-relaxed">
                   We typically respond within 1-2 business days. For urgent matters, please indicate this in your message subject line.
+                </p>
+              </div>
+
+              <div className="bg-secondary rounded-2xl p-8 mb-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl text-secondary-foreground mb-2">
+                      Text Us
+                    </h3>
+                    <a
+                      href="sms:+1XXXXXXXXXX"
+                      className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
+                    >
+                      (XXX) XXX-XXXX
+                    </a>
+                  </div>
+                </div>
+                <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  Prefer texting? Send us a message and we'll get back to you as soon as possible.
                 </p>
               </div>
 
