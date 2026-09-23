@@ -18,6 +18,7 @@ export default function Header() {
     { path: '/resources', label: 'Resources' },
     { path: '/contact', label: 'Contact' },
     { path: '/donate', label: 'Donate' },
+    { path: '/leadership-application', label: 'Apply for Leadership' },
   ];
 
   return (
