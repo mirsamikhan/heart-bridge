@@ -9,6 +9,7 @@ import HealthSitesPage from '@/components/pages/HealthSitesPage';
 import VolunteerPage from '@/components/pages/VolunteerPage';
 import ResourcesPage from '@/components/pages/ResourcesPage';
 import ContactPage from '@/components/pages/ContactPage';
+import DonatePage from '@/components/pages/DonatePage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -73,6 +74,13 @@ const router = createBrowserRouter([
         element: <ContactPage />,
         routeMetadata: {
           pageIdentifier: 'contact',
+        },
+      },
+      {
+        path: "donate",
+        element: <DonatePage />,
+        routeMetadata: {
+          pageIdentifier: 'donate',
         },
       },
       {

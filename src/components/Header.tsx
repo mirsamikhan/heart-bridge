@@ -17,6 +17,7 @@ export default function Header() {
     { path: '/volunteer', label: 'Volunteer' },
     { path: '/resources', label: 'Resources' },
     { path: '/contact', label: 'Contact' },
+    { path: '/donate', label: 'Donate' },
   ];
 
   return (
