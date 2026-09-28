@@ -25,6 +25,7 @@ export default function Header() {
   ];
 
   const moreLinks = [
+    { path: '/blog', label: 'Blog' },
     { path: '/contact', label: 'Contact' },
     { path: '/donate', label: 'Donate' },
     { path: '/leadership-application', label: 'Apply for Leadership' },
