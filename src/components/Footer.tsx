@@ -9,8 +9,8 @@ export default function Footer() {
           {/* About Column */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary-foreground rounded-full flex items-center justify-center">
-                <span className="font-heading text-2xl text-primary font-bold">D</span>
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-sm">
+                <img src="/logo.png" alt="DilSe Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="font-heading text-xl font-bold">DilSe</h3>

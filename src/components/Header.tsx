@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from '@/components/ui/dropdown-menu';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,17 +15,23 @@ export default function Header() {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const navLinks = [
+  const primaryLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
     { path: '/get-screened', label: 'Get Screened' },
     { path: '/health-sites', label: 'Health Sites' },
     { path: '/volunteer', label: 'Volunteer' },
     { path: '/resources', label: 'Resources' },
+  ];
+
+  const moreLinks = [
     { path: '/contact', label: 'Contact' },
     { path: '/donate', label: 'Donate' },
     { path: '/leadership-application', label: 'Apply for Leadership' },
   ];
+
+  // Full flat list for mobile menu
+  const allNavLinks = [...primaryLinks, ...moreLinks];
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b border-secondary shadow-sm">
@@ -27,9 +39,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="font-heading text-2xl text-primary-foreground font-bold">D</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="DilSe Logo"
+              className="w-12 h-12 object-contain"
+            />
             <div>
               <h1 className="font-heading text-xl md:text-2xl text-primary font-bold leading-tight">
                 DilSe
@@ -41,12 +55,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+          <nav className="hidden lg:flex items-center gap-6">
+            {primaryLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-paragraph text-base transition-colors ${
+                className={`font-paragraph text-sm transition-colors ${
                   isActive(link.path)
                     ? 'text-primary font-semibold'
                     : 'text-foreground hover:text-primary'
@@ -55,6 +69,33 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+
+            {/* More dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={`flex items-center gap-1 font-paragraph text-sm transition-colors outline-none ${
+                  moreLinks.some((l) => isActive(l.path))
+                    ? 'text-primary font-semibold'
+                    : 'text-foreground hover:text-primary'
+                }`}
+              >
+                More <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="min-w-[180px]">
+                {moreLinks.map((link) => (
+                  <DropdownMenuItem key={link.path} asChild>
+                    <Link
+                      to={link.path}
+                      className={`font-paragraph text-sm w-full ${
+                        isActive(link.path) ? 'text-primary font-semibold' : 'text-foreground'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* CTA Buttons - Desktop */}
@@ -90,7 +131,7 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-6 pb-4 border-t border-secondary pt-4">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
+              {allNavLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
