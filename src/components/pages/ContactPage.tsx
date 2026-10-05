@@ -108,7 +108,7 @@ export default function ContactPage() {
                       href="sms:+18664909361?&body=SUPPORT"
                       className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
                     >
-                      866-490-9361
+                      (866) 490-9361
                     </a>
                   </div>
                 </div>

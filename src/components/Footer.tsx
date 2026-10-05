@@ -61,10 +61,10 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-6">
               <MessageSquare className="w-5 h-5" />
               <a
-                href="sms:+1XXXXXXXXXX"
+                href="tel:+18664909361"
                 className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity"
               >
-                Text Us: (XXX) XXX-XXXX
+                Text Us: (866) 490-9361
               </a>
             </div>
             <p className="font-paragraph text-sm opacity-90 leading-relaxed">
