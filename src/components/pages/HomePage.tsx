@@ -230,7 +230,13 @@ export default function HomePage() {
                 variant="outline"
                 className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold text-lg px-10 py-7 h-auto rounded-full backdrop-blur-sm transition-all duration-300"
               >
-                <Link to="/volunteer">Volunteer With Us</Link>
+                <a
+                  href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Volunteer With Us
+                </a>
               </Button>
             </motion.div>
           </div>
@@ -557,7 +563,13 @@ export default function HomePage() {
                   asChild 
                   className="w-full bg-white text-accent-darker-blue hover:bg-secondary font-bold text-lg py-6 rounded-xl"
                 >
-                  <a href="https://forms.gle/JXHtZA6EsWVceng5A" target="_blank" rel="noopener noreferrer">Apply Now</a>
+                  <a
+                    href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Apply Now
+                  </a>
                 </Button>
               </motion.div>
             ))}

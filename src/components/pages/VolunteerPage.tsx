@@ -338,7 +338,13 @@ export default function VolunteerPage() {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
             >
-              <Link to="/leadership-application">Apply for Leadership</Link>
+              <a
+                href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply for Leadership
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -362,11 +368,17 @@ export default function VolunteerPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
+                asChild
                 size="lg"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
-                onClick={() => window.open('https://forms.gle/JXHtZA6EsWVceng5A', '_blank')}
               >
-                Apply to Volunteer
+                <a
+                  href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply to Volunteer
+                </a>
               </Button>
               <Button 
                 asChild
@@ -374,7 +386,13 @@ export default function VolunteerPage() {
                 variant="outline"
                 className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-paragraph text-base px-8 py-6 h-auto rounded-lg bg-transparent"
               >
-                <Link to="/leadership-application">Apply for Leadership</Link>
+                <a
+                  href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply for Leadership
+                </a>
               </Button>
             </div>
           </motion.div>
