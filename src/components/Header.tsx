@@ -106,7 +106,7 @@ export default function Header() {
               size="sm"
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph rounded-lg"
             >
-              <Link to="/get-screened">Get Screened</Link>
+              <Link to="/donate">Donate</Link>
             </Button>
             <Button 
               asChild 
@@ -114,7 +114,7 @@ export default function Header() {
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary/10 font-paragraph rounded-lg"
             >
-              <Link to="/volunteer">Volunteer</Link>
+              <Link to="/contact">Contact</Link>
             </Button>
           </div>
 
@@ -153,7 +153,7 @@ export default function Header() {
                   className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph rounded-lg w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Link to="/get-screened">Get Screened</Link>
+                  <Link to="/donate">Donate</Link>
                 </Button>
                 <Button 
                   asChild 
@@ -162,7 +162,7 @@ export default function Header() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 font-paragraph rounded-lg w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Link to="/volunteer">Volunteer</Link>
+                  <Link to="/contact">Contact</Link>
                 </Button>
               </div>
             </div>
