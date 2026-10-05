@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from '@/components/ui/dropdown-menu';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,17 +16,8 @@ export default function Header() {
     { path: '/health-sites', label: 'Health Sites' },
     { path: '/volunteer', label: 'Volunteer' },
     { path: '/resources', label: 'Resources' },
-  ];
-
-  const moreLinks = [
     { path: '/blog', label: 'Blog' },
-    { path: '/contact', label: 'Contact' },
-    { path: '/donate', label: 'Donate' },
-    { path: '/leadership-application', label: 'Apply for Leadership' },
   ];
-
-  // Full flat list for mobile menu
-  const allNavLinks = [...primaryLinks, ...moreLinks];
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b border-secondary shadow-sm">
@@ -70,33 +55,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-
-            {/* More dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                className={`flex items-center gap-1 font-paragraph text-sm transition-colors outline-none ${
-                  moreLinks.some((l) => isActive(l.path))
-                    ? 'text-primary font-semibold'
-                    : 'text-foreground hover:text-primary'
-                }`}
-              >
-                More <ChevronDown className="w-4 h-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-[180px]">
-                {moreLinks.map((link) => (
-                  <DropdownMenuItem key={link.path} asChild>
-                    <Link
-                      to={link.path}
-                      className={`font-paragraph text-sm w-full ${
-                        isActive(link.path) ? 'text-primary font-semibold' : 'text-foreground'
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
           </nav>
 
           {/* CTA Buttons - Desktop */}
@@ -132,7 +90,7 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-6 pb-4 border-t border-secondary pt-4">
             <div className="flex flex-col gap-4">
-              {allNavLinks.map((link) => (
+              {primaryLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
