@@ -34,9 +34,6 @@ export default function Footer() {
               <Link to="/get-screened" className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity">
                 Get Screened
               </Link>
-              <Link to="/health-sites" className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity">
-                Weekly Health Sites
-              </Link>
               <Link to="/volunteer" className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity">
                 Volunteer Opportunities
               </Link>

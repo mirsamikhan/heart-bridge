@@ -13,7 +13,6 @@ export default function Header() {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
     { path: '/get-screened', label: 'Get Screened' },
-    { path: '/health-sites', label: 'Health Sites' },
     { path: '/volunteer', label: 'Volunteer' },
     { path: '/resources', label: 'Resources' },
     { path: '/blog', label: 'Blog' },

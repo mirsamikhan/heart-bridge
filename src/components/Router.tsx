@@ -5,7 +5,6 @@ import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
 import HomePage from '@/components/pages/HomePage';
 import AboutPage from '@/components/pages/AboutPage';
 import GetScreenedPage from '@/components/pages/GetScreenedPage';
-import HealthSitesPage from '@/components/pages/HealthSitesPage';
 import VolunteerPage from '@/components/pages/VolunteerPage';
 import ResourcesPage from '@/components/pages/ResourcesPage';
 import ContactPage from '@/components/pages/ContactPage';
@@ -53,10 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "health-sites",
-        element: <HealthSitesPage />,
-        routeMetadata: {
-          pageIdentifier: 'health-sites',
-        },
+        element: <Navigate to="/get-screened#health-sites" replace />,
       },
       {
         path: "volunteer",
