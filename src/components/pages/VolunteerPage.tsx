@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Users, Phone, Award, CheckCircle, Star } from 'lucide-react';
+import { Users, Phone, Award, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BaseCrudService } from '@/integrations';
 import { VolunteerPositions } from '@/entities';
@@ -314,42 +314,6 @@ export default function VolunteerPage() {
         </div>
       </section>
 
-      {/* Apply for Leadership Section */}
-      <section className="w-full py-20 md:py-28 bg-background">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-secondary rounded-3xl p-8 md:p-12 text-center"
-          >
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-              <Star className="w-8 h-8 text-primary-foreground" />
-            </div>
-            <h2 className="font-heading text-3xl md:text-5xl text-secondary-foreground mb-4">
-              Apply for Leadership
-            </h2>
-            <p className="font-paragraph text-base md:text-lg text-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Interested in taking on an officer or leadership role with DilSe? Help guide our mission, coordinate community health sites, and lead public health initiatives across DFW.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
-            >
-              <a
-                href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apply for Leadership
-              </a>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="w-full py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="max-w-[100rem] mx-auto px-6">
@@ -378,20 +342,6 @@ export default function VolunteerPage() {
                   rel="noopener noreferrer"
                 >
                   Apply to Volunteer
-                </a>
-              </Button>
-              <Button 
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-paragraph text-base px-8 py-6 h-auto rounded-lg bg-transparent"
-              >
-                <a
-                  href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply for Leadership
                 </a>
               </Button>
             </div>
