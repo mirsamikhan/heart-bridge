@@ -1,14 +1,59 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Download, ExternalLink } from 'lucide-react';
+import { BookOpen, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BaseCrudService } from '@/integrations';
 import { EducationalResources } from '@/entities';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+// Add previewImageUrl to a resource when its first-page thumbnail is available.
+// Keep this local extension separate from the generated CMS entity types.
+type PreviewResource = EducationalResources & { previewImageUrl?: string };
+
+function ResourcePreview({ title, imageUrl }: { title: string; imageUrl?: string }) {
+  const [failedImageUrl, setFailedImageUrl] = useState<string>();
+  const showImage = imageUrl && imageUrl !== failedImageUrl;
+
+  return (
+    <div className="w-full max-w-[15rem] aspect-[3/4] mx-auto mb-6 bg-background rounded-xl border border-primary/15 overflow-hidden shadow-sm">
+      {showImage ? (
+        <img
+          src={imageUrl}
+          alt={`First-page preview of ${title}`}
+          loading="lazy"
+          className="w-full h-full object-contain"
+          onError={() => setFailedImageUrl(imageUrl)}
+        />
+      ) : (
+        <div role="img" aria-label={`Preview coming soon for ${title}`} className="h-full p-6 flex flex-col">
+          <div aria-hidden="true" className="flex-1">
+            <BookOpen className="w-8 h-8 text-primary mb-4" />
+            <p className="font-heading text-xl text-primary leading-snug line-clamp-3 mb-6">{title}</p>
+            <div className="space-y-3">
+              <div className="h-2 rounded-full bg-secondary" />
+              <div className="h-2 rounded-full bg-secondary" />
+              <div className="h-2 w-2/3 rounded-full bg-secondary" />
+            </div>
+          </div>
+          <p className="font-paragraph text-sm text-foreground/70 mt-4">Preview coming soon</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PendingDownload() {
+  return (
+    <Button disabled className="w-full font-paragraph text-base px-6 py-3 h-auto rounded-lg mt-auto">
+      <Download className="w-4 h-4 mr-2" />
+      Download coming soon
+    </Button>
+  );
+}
+
 export default function ResourcesPage() {
-  const [resources, setResources] = useState<EducationalResources[]>([]);
+  const [resources, setResources] = useState<PreviewResource[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
@@ -19,7 +64,7 @@ export default function ResourcesPage() {
   const loadResources = async () => {
     try {
       setIsLoading(true);
-      const result = await BaseCrudService.getAll<EducationalResources>('educationalresources');
+      const result = await BaseCrudService.getAll<PreviewResource>('educationalresources');
       setResources(result.items);
     } catch (error) {
       console.error('Error loading resources:', error);
@@ -145,13 +190,15 @@ export default function ResourcesPage() {
                       </div>
                     </div>
 
+                    <ResourcePreview title={resource.resourceTitle || 'Educational resource'} imageUrl={resource.previewImageUrl} />
+
                     {resource.contentSummary && (
                       <p className="font-paragraph text-base text-foreground mb-6 leading-relaxed flex-1">
                         {resource.contentSummary}
                       </p>
                     )}
 
-                    {resource.downloadableFileUrl && (
+                    {resource.downloadableFileUrl ? (
                       <a
                         href={resource.downloadableFileUrl}
                         target="_blank"
@@ -161,6 +208,8 @@ export default function ResourcesPage() {
                         <Download className="w-4 h-4" />
                         Download Resource
                       </a>
+                    ) : (
+                      <PendingDownload />
                     )}
                   </motion.div>
                 ))}
@@ -173,7 +222,7 @@ export default function ResourcesPage() {
                 className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {/* Default Educational Content */}
-                <div className="bg-secondary rounded-2xl p-8">
+                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-primary-foreground" />
@@ -187,12 +236,14 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                   </div>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <ResourcePreview title="Health Screenings for Cardiovascular Risk Factors" />
+                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
                     Learn what blood pressure numbers mean, why they matter, and how to maintain healthy levels through lifestyle changes tailored to South Asian diets and routines.
                   </p>
+                  <PendingDownload />
                 </div>
 
-                <div className="bg-secondary rounded-2xl p-8">
+                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-primary-foreground" />
@@ -206,12 +257,14 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                   </div>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <ResourcePreview title="Heart-Healthy South Asian Cooking" />
+                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
                     Discover how to prepare traditional South Asian dishes in heart-healthy ways, with tips for reducing sodium, choosing healthier oils, and balancing your meals.
                   </p>
+                  <PendingDownload />
                 </div>
 
-                <div className="bg-secondary rounded-2xl p-8">
+                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-primary-foreground" />
@@ -225,12 +278,14 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                   </div>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <ResourcePreview title="Recognizing Heart Attack Warning Signs" />
+                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
                     Know the warning signs of a heart attack and what to do in an emergency. Early recognition and action can save lives.
                   </p>
+                  <PendingDownload />
                 </div>
 
-                <div className="bg-secondary rounded-2xl p-8">
+                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-primary-foreground" />
@@ -244,12 +299,14 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                   </div>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <ResourcePreview title="Physical Activity for Heart Health" />
+                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
                     Simple, practical ways to incorporate physical activity into your daily routine, even with a busy schedule.
                   </p>
+                  <PendingDownload />
                 </div>
 
-                <div className="bg-secondary rounded-2xl p-8">
+                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-primary-foreground" />
@@ -263,12 +320,14 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                   </div>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <ResourcePreview title="Managing Stress & Mental Health" />
+                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
                     Understand the connection between stress and heart health, with culturally relevant strategies for managing stress and supporting mental wellness.
                   </p>
+                  <PendingDownload />
                 </div>
 
-                <div className="bg-secondary rounded-2xl p-8">
+                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-primary-foreground" />
@@ -282,9 +341,11 @@ export default function ResourcesPage() {
                       </span>
                     </div>
                   </div>
-                  <p className="font-paragraph text-base text-foreground leading-relaxed">
+                  <ResourcePreview title="Diabetes & Heart Disease Connection" />
+                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
                     Learn about the strong link between diabetes and cardiovascular disease, and how to manage both conditions effectively.
                   </p>
+                  <PendingDownload />
                 </div>
               </motion.div>
             )}

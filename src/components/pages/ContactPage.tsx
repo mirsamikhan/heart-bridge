@@ -283,7 +283,7 @@ export default function ContactPage() {
                   >
                     866-490-9361
                   </a>{' '}
-                  for event inquiries, questions, or feedback
+                  for SMS assistance
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
                   <Button
