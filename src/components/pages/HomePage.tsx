@@ -307,9 +307,14 @@ export default function HomePage() {
                 </p>
               </motion.div>
 
-              <Link to="/about" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline underline-offset-4">
-                Meet DilSe <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link to="/about" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline underline-offset-4">
+                  Meet DilSe <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+                <Button asChild className="font-semibold px-6 py-3 h-auto rounded-xl">
+                  <Link to="/donate">Support DilSe</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
