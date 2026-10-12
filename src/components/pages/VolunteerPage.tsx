@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Users, Phone, Award, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +6,18 @@ import { BaseCrudService } from '@/integrations';
 import { VolunteerPositions } from '@/entities';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+const VOLUNTEER_APPLICATION_URL = 'https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing';
+
+function RoleApplicationButton({ role }: { role: string }) {
+  return (
+    <Button asChild className="font-paragraph text-base px-6 py-3 h-auto rounded-lg mb-4 whitespace-normal text-center">
+      <a href={VOLUNTEER_APPLICATION_URL} target="_blank" rel="noopener noreferrer" aria-label={`Apply for ${role}`}>
+        Apply for This Role
+      </a>
+    </Button>
+  );
+}
 
 export default function VolunteerPage() {
   const [positions, setPositions] = useState<VolunteerPositions[]>([]);
@@ -33,7 +44,7 @@ export default function VolunteerPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="w-full bg-primary text-primary-foreground py-20 md:py-28">
+      <section className="w-full bg-primary text-primary-foreground py-10 md:py-14">
         <div className="max-w-[100rem] mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +52,7 @@ export default function VolunteerPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="font-heading text-4xl md:text-6xl mb-6">
+            <h1 className="font-heading text-4xl md:text-6xl mb-4">
               Volunteer & Research Opportunities
             </h1>
             <p className="font-paragraph text-lg md:text-xl opacity-95">
@@ -52,19 +63,19 @@ export default function VolunteerPage() {
       </section>
 
       {/* Why Volunteer */}
-      <section className="w-full py-20 md:py-28">
+      <section className="w-full py-10 md:py-14">
         <div className="max-w-[100rem] mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-heading text-3xl md:text-5xl text-primary text-center mb-16"
+            className="font-heading text-3xl md:text-5xl text-primary text-center mb-8"
           >
             Why Volunteer with DilSe
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +83,7 @@ export default function VolunteerPage() {
               transition={{ duration: 0.6 }}
               className="bg-secondary rounded-2xl p-8 text-center"
             >
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-4">
@@ -90,7 +101,7 @@ export default function VolunteerPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-secondary rounded-2xl p-8 text-center"
             >
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-4">
@@ -108,7 +119,7 @@ export default function VolunteerPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-secondary rounded-2xl p-8 text-center"
             >
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-4">
@@ -126,7 +137,7 @@ export default function VolunteerPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-secondary rounded-2xl p-8 text-center"
             >
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-4">
@@ -141,25 +152,25 @@ export default function VolunteerPage() {
       </section>
 
       {/* Positions Available */}
-      <section className="w-full py-20 md:py-28 bg-background">
+      <section id="volunteer-roles" className="w-full py-10 md:py-14 bg-background scroll-mt-24">
         <div className="max-w-[100rem] mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-heading text-3xl md:text-5xl text-primary text-center mb-16"
+            className="font-heading text-3xl md:text-5xl text-primary text-center mb-8"
           >
             Positions Available
           </motion.h2>
 
-          <div className="min-h-[400px]">
+          <div className="min-h-[160px]">
             {isLoading ? null : positions.length > 0 ? (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+                className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto"
               >
                 {positions.map((position, index) => (
                   <motion.div
@@ -167,9 +178,9 @@ export default function VolunteerPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-secondary rounded-3xl p-8 md:p-10"
+                    className="bg-secondary rounded-3xl p-6 md:p-8"
                   >
-                    <div className="mb-6">
+                    <div className="mb-4">
                       <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-3">
                         {position.positionTitle}
                       </h3>
@@ -181,13 +192,15 @@ export default function VolunteerPage() {
                     </div>
 
                     {position.roleDescription && (
-                      <p className="font-paragraph text-base text-foreground mb-6 leading-relaxed">
+                      <p className="font-paragraph text-base text-foreground mb-4 leading-relaxed">
                         {position.roleDescription}
                       </p>
                     )}
 
+                    <RoleApplicationButton role={position.positionTitle || 'Volunteer'} />
+
                     {position.responsibilities && (
-                      <div className="mb-6">
+                      <div className="mb-4">
                         <h4 className="font-heading text-lg text-secondary-foreground mb-3">
                           Responsibilities
                         </h4>
@@ -205,7 +218,7 @@ export default function VolunteerPage() {
                     )}
 
                     {position.requirements && (
-                      <div className="mb-6">
+                      <div className="mb-4">
                         <h4 className="font-heading text-lg text-secondary-foreground mb-3">
                           Requirements
                         </h4>
@@ -215,7 +228,7 @@ export default function VolunteerPage() {
                       </div>
                     )}
 
-                    <div className="flex flex-wrap gap-3 mb-6">
+                    <div className="flex flex-wrap gap-3 mb-4">
                       {position.trainingProvided && (
                         <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full">
                           <CheckCircle className="w-4 h-4 text-primary" />
@@ -243,19 +256,23 @@ export default function VolunteerPage() {
                 transition={{ duration: 0.6 }}
                 className="bg-secondary rounded-3xl p-8 md:p-12 max-w-4xl mx-auto"
               >
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-6">
+                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-4">
                   Screening & Outreach Volunteer (In-Person)
                 </h3>
-                <p className="font-paragraph text-base text-foreground mb-6 leading-relaxed">
+                <p className="font-paragraph text-base text-foreground mb-4 leading-relaxed">
                   Serve at weekly 2-hour community health sites across DFW. Engage community members, conduct blood pressure screenings, identify high-risk participants, enroll individuals into longitudinal follow-up, and collect data supporting public health research.
                 </p>
                 
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-6 mt-10">
+                <RoleApplicationButton role="Screening & Outreach Volunteer" />
+
+                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-4 mt-6">
                   Community Health Coach (Remote)
                 </h3>
-                <p className="font-paragraph text-base text-foreground mb-6 leading-relaxed">
+                <p className="font-paragraph text-base text-foreground mb-4 leading-relaxed">
                   Serve as a designated health coach for community members. Conduct weekly follow-up calls, support care navigation and healthy lifestyle practices, and document participant progress for longitudinal research.
                 </p>
+
+                <RoleApplicationButton role="Community Health Coach" />
 
                 <div className="flex flex-wrap gap-3 mt-8">
                   <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full">
@@ -284,7 +301,7 @@ export default function VolunteerPage() {
       </section>
 
       {/* Important Information */}
-      <section className="w-full py-20 md:py-28 bg-secondary">
+      <section className="w-full py-10 md:py-14 bg-secondary">
         <div className="max-w-[100rem] mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -315,19 +332,19 @@ export default function VolunteerPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-20 md:py-28 bg-primary text-primary-foreground">
+      <section id="volunteer-apply" className="w-full py-10 md:py-14 bg-background scroll-mt-24">
         <div className="max-w-[100rem] mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-5xl mx-auto bg-primary text-primary-foreground rounded-3xl px-6 py-10 md:px-10 md:py-12 text-center"
           >
-            <h2 className="font-heading text-3xl md:text-5xl mb-6">
+            <h2 className="font-heading text-3xl md:text-5xl mb-4">
               Ready to Make a Difference?
             </h2>
-            <p className="font-paragraph text-base md:text-lg mb-10 opacity-95">
+            <p className="font-paragraph text-base md:text-lg mb-6 opacity-95">
               Join our team of volunteers and help improve cardiovascular health in South Asian communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -337,7 +354,7 @@ export default function VolunteerPage() {
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
               >
                 <a
-                  href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
+                  href={VOLUNTEER_APPLICATION_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
