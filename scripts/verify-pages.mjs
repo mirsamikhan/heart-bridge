@@ -14,8 +14,8 @@ const files = await readdir(assets);
 const code = (await Promise.all(files.filter(file => file.endsWith('.js'))
   .map(file => readFile(new URL(file, assets), 'utf8')))).join('\n');
 for (const path of ['logo.png', 'qr-code.png', 'qr-code-heart.png',
-  'officers/mir-sami-khan.jpg', 'officers/gobinathan-vaseegaran.jpg', 'officers/leah-harris.jpg',
-  'officers/asma-mohammed.jpg', 'officers/samaira-srivastva.jpg', 'officers/ayesha-sharif.jpg']) {
+  'officers/mir-sami-khan-headshot.png', 'officers/gobinathan-vaseegaran-headshot.png', 'officers/leah-harris-headshot.png',
+  'officers/asma-mohammed-headshot.png', 'officers/samaira-srivastva-headshot.png', 'officers/ayesha-sharif-headshot.png']) {
   assert(code.includes(base) && code.includes(`/${path}`), `Missing base-aware asset: ${path}`);
   await access(new URL(path, dist));
 }

@@ -54,117 +54,43 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section className="w-full py-6 md:py-8 bg-background">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="font-heading text-3xl md:text-5xl text-primary text-center mb-8 md:mb-10"
-          >
-            Leadership
-          </motion.h2>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-6xl mx-auto space-y-8"
-          >
-            <div className="bg-secondary rounded-3xl p-8 md:p-12 grid md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-8 md:gap-12 items-center text-center md:text-left">
-              <img
-                src="/officers/mir-sami-khan.jpg"
-                alt="Mir Sami Khan"
-                className="w-full max-w-sm mx-auto aspect-[3/4] object-cover rounded-2xl"
-                loading="lazy"
-              />
+      <section className="w-full py-10 md:py-14 bg-background" aria-labelledby="leadership-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 id="leadership-heading" className="scroll-mt-28 font-heading text-3xl md:text-4xl text-primary text-center mb-8">Leadership</h2>
+          <div className="max-w-5xl mx-auto">
+            <article className="max-w-3xl mx-auto mb-8 bg-white border border-primary/10 rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left shadow-sm">
+              <img src="/officers/mir-sami-khan-headshot.png" alt="Mir Sami Khan" className="w-44 h-44 sm:w-48 sm:h-48 shrink-0 rounded-xl object-cover" loading="lazy" />
               <div>
-                <h3 className="font-heading text-3xl md:text-4xl text-secondary-foreground mb-2">
-                  Mir Sami Khan
-                </h3>
-                <p className="font-paragraph text-lg text-primary font-semibold mb-6">
-                  Project Director
-                </p>
-                <p className="font-paragraph text-base text-foreground leading-relaxed">
-                  Mir Sami Khan leads the DilSe initiative, bringing vision and expertise to our mission of advancing cardiovascular health in South Asian communities across the Dallas–Fort Worth area.
-                </p>
+                <h3 className="font-heading text-2xl text-primary mb-1">Mir Sami Khan</h3>
+                <p className="font-paragraph text-sm text-primary font-semibold mb-3">Project Director</p>
+                <p className="font-paragraph text-sm text-foreground/75 leading-relaxed">Mir Sami Khan leads the DilSe initiative, bringing vision and expertise to our mission of advancing cardiovascular health in South Asian communities across the Dallas–Fort Worth area.</p>
               </div>
+            </article>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: 'Gobinathan Vaseegaran', role: 'Training Officer', photo: '/officers/gobinathan-vaseegaran-headshot.png' },
+                { name: 'Leah Harris', role: 'Education Officer', photo: '/officers/leah-harris-headshot.png' },
+                { name: 'Asma Mohammed', role: 'Secretary', photo: '/officers/asma-mohammed-headshot.png' },
+                { name: 'Samaira Srivastva', role: 'Administrative Officer', photo: '/officers/samaira-srivastva-headshot.png' },
+                { name: 'Ayesha Sharif', role: 'Scheduling Officer', photo: '/officers/ayesha-sharif-headshot.png' },
+                { name: 'Harneet Bains', role: 'Training Officer', photo: undefined },
+                { name: 'Samatha Belatur', role: 'Community Outreach Officer', photo: undefined },
+              ].map(member => (
+                <article key={member.name} className={`bg-white border border-primary/10 rounded-2xl p-6 text-center shadow-sm ${member.name === 'Samatha Belatur' ? 'lg:col-start-2' : ''}`}>
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} className="w-48 h-48 mx-auto rounded-xl object-cover mb-4" loading="lazy" />
+                  ) : (
+                    <div className="w-48 h-48 mx-auto rounded-xl bg-[#e8e9ec] mb-4 flex flex-col items-center justify-center gap-2" aria-label={`Photo coming soon for ${member.name}`}>
+                      <span aria-hidden="true" className="font-heading text-3xl text-primary/60">{member.name.split(' ').map(part => part[0]).join('')}</span>
+                      <span className="font-paragraph text-xs text-foreground/60">Photo coming soon</span>
+                    </div>
+                  )}
+                  <h3 className="font-heading text-xl text-primary leading-snug mb-1">{member.name}</h3>
+                  <p className="font-paragraph text-sm text-primary/80 font-medium">{member.role}</p>
+                </article>
+              ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-8 text-center">
-              <div className="w-full md:w-[calc((100%_-_2rem)/2)] lg:w-[calc((100%_-_4rem)/3)] shrink-0 bg-secondary rounded-3xl p-8 md:p-12">
-                <img
-                  src="/officers/gobinathan-vaseegaran.jpg"
-                  alt="Gobinathan Vaseegaran"
-                  className="w-full aspect-[3/4] object-cover rounded-2xl mb-6"
-                  loading="lazy"
-                />
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-2">
-                  Gobinathan Vaseegaran
-                </h3>
-                <p className="font-paragraph text-lg text-primary font-semibold">
-                  Training Officer
-                </p>
-              </div>
-              <div className="w-full md:w-[calc((100%_-_2rem)/2)] lg:w-[calc((100%_-_4rem)/3)] shrink-0 bg-secondary rounded-3xl p-8 md:p-12">
-                <img
-                  src="/officers/leah-harris.jpg"
-                  alt="Leah Harris"
-                  className="w-full aspect-[3/4] object-cover rounded-2xl mb-6"
-                  loading="lazy"
-                />
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-2">
-                  Leah Harris
-                </h3>
-                <p className="font-paragraph text-lg text-primary font-semibold">
-                  Education Officer
-                </p>
-              </div>
-              <div className="w-full md:w-[calc((100%_-_2rem)/2)] lg:w-[calc((100%_-_4rem)/3)] shrink-0 bg-secondary rounded-3xl p-8 md:p-12">
-                <img
-                  src="/officers/asma-mohammed.jpg"
-                  alt="Asma Mohammed"
-                  className="w-full aspect-[3/4] object-cover rounded-2xl mb-6"
-                  loading="lazy"
-                />
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-2">
-                  Asma Mohammed
-                </h3>
-                <p className="font-paragraph text-lg text-primary font-semibold">
-                  Secretary
-                </p>
-              </div>
-              <div className="w-full md:w-[calc((100%_-_2rem)/2)] lg:w-[calc((100%_-_4rem)/3)] shrink-0 bg-secondary rounded-3xl p-8 md:p-12">
-                <img
-                  src="/officers/samaira-srivastva.jpg"
-                  alt="Samaira Srivastva"
-                  className="w-full aspect-[3/4] object-cover rounded-2xl mb-6"
-                  loading="lazy"
-                />
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-2">
-                  Samaira Srivastva
-                </h3>
-                <p className="font-paragraph text-lg text-primary font-semibold">
-                  Administrative Officer
-                </p>
-              </div>
-              <div className="w-full md:w-[calc((100%_-_2rem)/2)] lg:w-[calc((100%_-_4rem)/3)] shrink-0 bg-secondary rounded-3xl p-8 md:p-12">
-                <img
-                  src="/officers/ayesha-sharif.jpg"
-                  alt="Ayesha Sharif"
-                  className="w-full aspect-[3/4] object-cover rounded-2xl mb-6"
-                  loading="lazy"
-                />
-                <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-2">
-                  Ayesha Sharif
-                </h3>
-                <p className="font-paragraph text-lg text-primary font-semibold">
-                  Scheduling Officer
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          </div>
           <div className="text-center mt-10">
             <Button
               asChild
