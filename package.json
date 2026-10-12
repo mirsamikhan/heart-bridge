@@ -4,12 +4,14 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build --config astro.pages.config.mjs && node scripts/finalize-pages.mjs && node scripts/verify-pages.mjs",
     "preview": "astro preview",
     "release": "wix release",
     "env": "wix env pull",
     "check": "npx astro check --js-only",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "build:wix": "astro build",
+    "preview:pages": "astro preview --config astro.pages.config.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",

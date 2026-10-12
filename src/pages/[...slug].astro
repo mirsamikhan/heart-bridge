@@ -1,13 +1,23 @@
 ---
-import { SEO } from '@wix/seo/components';
-import { loadSEOTagsServiceConfig } from '@wix/seo/services';
 import { Head } from "@/components/Head";
 import AppRouter from "@/components/Router";
 import "@wix/wix-vibe-plugins/plugins-vars.css";
 import "@wix/wix-vibe-plugins/plugins-theme.css";
 import "@/styles/global.css";
 
-const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
+export async function getStaticPaths() {
+  const { readFileSync, readdirSync } = await import('node:fs');
+  const router = readFileSync(`${process.cwd()}/src/components/Router.tsx`, 'utf8');
+  const routes = [...router.matchAll(/path: "([^"]+)"/g)]
+    .map(match => match[1]).filter(path => !['/', '*'].includes(path) && !path.includes(':'));
+  const posts = readdirSync(`${process.cwd()}/src/content/blog/`)
+    .filter(file => file.endsWith('.md')).map(file => `blog/${file.slice(0, -3)}`);
+  return [undefined, ...routes, ...posts].map(slug => ({ params: { slug } }));
+}
+
+const isPages = import.meta.env.PUBLIC_GITHUB_PAGES;
+const SEO = isPages ? undefined : (await import('@wix/seo/components')).SEO;
+const seoTagsServiceConfig = isPages ? undefined : await (await import('@wix/seo/services')).loadSEOTagsServiceConfig({
   pageUrl: Astro.url.href,
   itemData: {
     pageName: 'Home',
@@ -18,7 +28,7 @@ const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
 <html lang="en" class="w-full h-full">
   <head>
     <Head />
-    <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />
+    {SEO && <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />}
   </head>
   <body class="w-full h-full">
     <div id="root" class="w-full h-full">

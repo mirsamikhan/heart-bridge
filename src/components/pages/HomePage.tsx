@@ -580,6 +580,26 @@ export default function HomePage() {
       {/* Design: Full-width immersive slideshow with navigation controls */}
       {/* --- SERVICES & PATHWAYS --- */}
       {/* Design: Light, airy, card-based grid. */}
+      {/* Partner logos: replace the placeholders with partner images when available. */}
+      <section className="w-full py-12 md:py-16 bg-background" aria-labelledby="partners-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 id="partners-heading" className="font-heading text-3xl md:text-4xl text-primary text-center mb-8">
+            Our Partners
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {[1, 2, 3, 4].map((partner) => (
+              <div
+                key={partner}
+                aria-label={`Partner logo placeholder ${partner}`}
+                className="w-[calc((100%_-_1rem)/2)] md:w-[calc((100%_-_4.5rem)/4)] h-28 md:h-32 bg-secondary/30 border border-secondary rounded-2xl flex flex-col items-center justify-center gap-2 px-4 text-center"
+              >
+                <span className="font-heading text-xl text-primary">Partner Logo</span>
+                <span className="font-paragraph text-sm text-foreground/60">Coming soon</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* --- CTA SECTION --- */}
       {/* Design: Full width image background with overlay. Emotional connection. */}
       <section className="w-full py-32 relative overflow-hidden">
