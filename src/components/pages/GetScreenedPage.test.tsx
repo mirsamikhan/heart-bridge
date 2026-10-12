@@ -39,7 +39,7 @@ describe('combined screening page', () => {
     expect(screen.getByText('Saturday 10 AM')).toBeInTheDocument();
     expect(screen.getByText('Walk-up screenings')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'View on Map' })).toHaveAttribute('target', '_blank');
-    expect(screen.getByRole('link', { name: 'View Health Sites' })).toHaveAttribute('href', '#health-sites');
+    expect(screen.queryByRole('heading', { name: 'Find a Health Site Near You' })).not.toBeInTheDocument();
     expect(BaseCrudService.getAll).toHaveBeenCalledWith('healthsites');
   });
 
