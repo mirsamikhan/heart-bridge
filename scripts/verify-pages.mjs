@@ -13,7 +13,7 @@ const assets = new URL('_astro/', dist);
 const files = await readdir(assets);
 const code = (await Promise.all(files.filter(file => file.endsWith('.js'))
   .map(file => readFile(new URL(file, assets), 'utf8')))).join('\n');
-for (const path of ['logo.png', 'qr-code.png', 'qr-code-heart.png',
+for (const path of ['logo.png',
   'officers/mir-sami-khan-headshot.png', 'officers/gobinathan-vaseegaran-headshot.png', 'officers/leah-harris-headshot.png',
   'officers/asma-mohammed-headshot.png', 'officers/samaira-srivastva-headshot.png', 'officers/ayesha-sharif-headshot.png']) {
   assert(code.includes(base) && code.includes(`/${path}`), `Missing base-aware asset: ${path}`);
@@ -33,4 +33,4 @@ for (const file of files.filter(file => file.endsWith('.css'))) {
 assert(fontCount > 0);
 const posts = await readdir(new URL('../src/content/blog/', import.meta.url));
 for (const file of posts.filter(file => file.endsWith('.md'))) await access(new URL(`blog/${file.slice(0, -3)}/index.html`, dist));
-console.log(`Verified route entry points, 404 shell, 9 local images, ${fontCount} font references, and blog deep links.`);
+console.log(`Verified route entry points, 404 shell, 7 local images, ${fontCount} font references, and blog deep links.`);

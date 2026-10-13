@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Send, CheckCircle, Heart } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -69,52 +69,27 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-heading text-3xl md:text-4xl text-primary mb-8">
+              <h2 id="get-in-touch" className="scroll-mt-28 font-heading text-3xl md:text-4xl text-primary mb-8">
                 Get in Touch
               </h2>
               
-              <div className="bg-secondary rounded-2xl p-8 mb-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Email Us
-                    </h3>
-                    <a 
-                      href="mailto:DilSeDFW@outlook.com"
-                      className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
-                    >
-                      DilSeDFW@outlook.com
-                    </a>
+              <div className="bg-secondary rounded-2xl p-6 sm:p-8 mb-8 space-y-6">
+                <div className="flex items-start gap-4">
+                  <Mail className="w-6 h-6 text-primary shrink-0 mt-1" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <h3 className="font-heading text-xl text-primary mb-2">Email Us</h3>
+                    <a href="mailto:DilSeDFW@outlook.com" className="font-paragraph text-base text-primary hover:underline break-words">DilSeDFW@outlook.com</a>
+                    <p className="font-paragraph text-sm text-foreground/75 mt-2">We typically respond within 1–2 business days.</p>
                   </div>
                 </div>
-                <p className="font-paragraph text-base text-foreground leading-relaxed">
-                  We typically respond within 1-2 business days. For urgent matters, please indicate this in your message subject line.
-                </p>
-              </div>
-
-              <div className="bg-secondary rounded-2xl p-8 mb-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Text Us
-                    </h3>
-                    <a
-                      href="sms:+18664909361?&body=SUPPORT"
-                      className="font-paragraph text-base text-foreground hover:text-primary transition-colors"
-                    >
-                      (866) 490-9361
-                    </a>
+                <div className="border-t border-primary/15 pt-6 flex items-start gap-4">
+                  <MessageSquare className="w-6 h-6 text-primary shrink-0 mt-1" aria-hidden="true" />
+                  <div className="min-w-0 space-y-3">
+                    <h3 className="font-heading text-xl text-primary">Text Us</h3>
+                    <p className="font-paragraph text-base text-foreground leading-relaxed">Text <strong>SUPPORT</strong> to <a href="sms:+18664909361?&body=SUPPORT" className="text-primary font-semibold hover:underline">866-490-9361</a> for SMS assistance.</p>
+                    <p className="font-paragraph text-base text-foreground leading-relaxed">Text <strong>HEART</strong> to <a href="sms:+18664909361?&body=HEART" className="text-primary font-semibold hover:underline">866-490-9361</a> for weekly health reminders.</p>
                   </div>
                 </div>
-                <p className="font-paragraph text-base text-foreground leading-relaxed">
-                  Prefer texting? Text SUPPORT to 866-490-9361 and we'll get back to you as soon as possible.
-                </p>
               </div>
 
               <div className="space-y-6">
@@ -254,132 +229,6 @@ export default function ContactPage() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Text Support Section */}
-      <section className="w-full py-20 md:py-28 bg-background border-t border-secondary">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto bg-secondary rounded-3xl p-8 md:p-12"
-          >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-              <div className="flex-1 text-center md:text-left">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6">
-                  <MessageSquare className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h2 className="font-heading text-3xl md:text-4xl text-secondary-foreground mb-4">
-                  Text Support
-                </h2>
-                <p className="font-paragraph text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                  Text <span className="font-bold text-primary">SUPPORT</span> to{' '}
-                  <a
-                    href="sms:+18664909361?&body=SUPPORT"
-                    className="font-bold text-primary hover:underline underline-offset-4"
-                  >
-                    866-490-9361
-                  </a>{' '}
-                  for SMS assistance
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
-                  >
-                    <a href="sms:+18664909361?&body=SUPPORT">
-                      <MessageSquare className="w-5 h-5 mr-2" />
-                      Text 866-490-9361
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center justify-center flex-shrink-0">
-                <a
-                  href="sms:+18664909361?&body=SUPPORT"
-                  className="group block"
-                  aria-label="Scan to text SUPPORT to 866-490-9361"
-                >
-                  <img
-                    src="/qr-code.png"
-                    alt="Scan to text SUPPORT to 866-490-9361"
-                    className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-2xl bg-white p-4 border border-secondary shadow-sm transition-transform duration-300 group-hover:scale-105"
-                  />
-                </a>
-                <p className="font-paragraph text-sm text-foreground/80 mt-3 text-center">
-                  Scan to text SUPPORT to 866-490-9361
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Weekly Heart Health Tips Section */}
-      <section className="w-full py-20 md:py-28 bg-background border-t border-secondary">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto bg-secondary rounded-3xl p-8 md:p-12"
-          >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-              <div className="flex-1 text-center md:text-left">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6">
-                  <Heart className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h2 className="font-heading text-3xl md:text-4xl text-secondary-foreground mb-4">
-                  Weekly Health Tips
-                </h2>
-                <p className="font-paragraph text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                  Text <span className="font-bold text-primary">HEART</span> to{' '}
-                  <a
-                    href="sms:+18664909361?&body=HEART"
-                    className="font-bold text-primary hover:underline underline-offset-4"
-                  >
-                    866-490-9361
-                  </a>{' '}
-                  for weekly SMS heart health education and reminders
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
-                  >
-                    <a href="sms:+18664909361?&body=HEART">
-                      <Heart className="w-5 h-5 mr-2" />
-                      Text HEART to 866-490-9361
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center justify-center flex-shrink-0">
-                <a
-                  href="sms:+18664909361?&body=HEART"
-                  className="group block"
-                  aria-label="Scan to text HEART to 866-490-9361"
-                >
-                  <img
-                    src="/qr-code-heart.png"
-                    alt="Scan to text HEART to 866-490-9361"
-                    className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-2xl bg-white p-4 border border-secondary shadow-sm transition-transform duration-300 group-hover:scale-105"
-                  />
-                </a>
-                <p className="font-paragraph text-sm text-foreground/80 mt-3 text-center">
-                  Scan to text HEART to 866-490-9361
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
