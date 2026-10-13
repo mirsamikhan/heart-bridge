@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MessageSquare } from 'lucide-react';
+import { Mail, MessageSquare, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -22,6 +22,19 @@ export default function Footer() {
             <p className="font-paragraph text-sm opacity-90 leading-relaxed">
               A community-based public health initiative developed in collaboration with UT Southwestern physicians.
             </p>
+            <div className="mt-6">
+              <h4 className="font-heading text-base font-semibold mb-3">Follow DilSe</h4>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://www.instagram.com/dilseprogram/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-white/25 px-3 py-2 text-sm font-paragraph hover:bg-white/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                  <Instagram className="w-4 h-4" aria-hidden="true" /> Instagram
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a href="https://www.linkedin.com/company/dilse-south-asian-health" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-white/25 px-3 py-2 text-sm font-paragraph hover:bg-white/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                  <Linkedin className="w-4 h-4" aria-hidden="true" /> LinkedIn
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
