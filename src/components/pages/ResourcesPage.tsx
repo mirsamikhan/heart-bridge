@@ -1,386 +1,79 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, Download } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Download, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BaseCrudService } from '@/integrations';
-import { EducationalResources } from '@/entities';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-// Add previewImageUrl to a resource when its first-page thumbnail is available.
-// Keep this local extension separate from the generated CMS entity types.
-type PreviewResource = EducationalResources & { previewImageUrl?: string };
-
-function ResourcePreview({ title, imageUrl }: { title: string; imageUrl?: string }) {
-  const [failedImageUrl, setFailedImageUrl] = useState<string>();
-  const showImage = imageUrl && imageUrl !== failedImageUrl;
-
-  return (
-    <div className="w-full max-w-[15rem] aspect-[3/4] mx-auto mb-6 bg-background rounded-xl border border-primary/15 overflow-hidden shadow-sm">
-      {showImage ? (
-        <img
-          src={imageUrl}
-          alt={`First-page preview of ${title}`}
-          loading="lazy"
-          className="w-full h-full object-contain"
-          onError={() => setFailedImageUrl(imageUrl)}
-        />
-      ) : (
-        <div role="img" aria-label={`Preview coming soon for ${title}`} className="h-full p-6 flex flex-col">
-          <div aria-hidden="true" className="flex-1">
-            <BookOpen className="w-8 h-8 text-primary mb-4" />
-            <p className="font-heading text-xl text-primary leading-snug line-clamp-3 mb-6">{title}</p>
-            <div className="space-y-3">
-              <div className="h-2 rounded-full bg-secondary" />
-              <div className="h-2 rounded-full bg-secondary" />
-              <div className="h-2 w-2/3 rounded-full bg-secondary" />
-            </div>
-          </div>
-          <p className="font-paragraph text-sm text-foreground/70 mt-4">Preview coming soon</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function PendingDownload() {
-  return (
-    <Button disabled className="w-full font-paragraph text-base px-6 py-3 h-auto rounded-lg mt-auto">
-      <Download className="w-4 h-4 mr-2" />
-      Download coming soon
-    </Button>
-  );
-}
+export const HANDOUTS = [
+  { title: 'DilSe Patient & PCP Checklist', category: 'Care Visits', format: 'PNG', file: '/handouts/dilse-patient-pcp-checklist.png', pages: ['/handouts/dilse-patient-pcp-checklist.png'], description: 'A checklist to bring to your primary-care visit, with questions and topics to discuss.' },
+  { title: 'Heart Healthy Recipe Ideas', category: 'Nutrition', format: 'PNG', file: '/handouts/heart-healthy-recipe-ideas.png', pages: ['/handouts/heart-healthy-recipe-ideas.png'], description: 'Ideas for breakfast, lunch, dinner, and snacks inspired by South Asian meals.' },
+  { title: 'Heart Health Diet for South Asians', category: 'Nutrition', format: 'PDF', file: '/handouts/heart-health-diet.pdf', pages: ['/resource-previews/heart-health-diet.png'], description: 'An illustrated guide to food choices and everyday swaps for heart health.' },
+  { title: 'Type 2 Diabetes in South Asians', category: 'Diabetes', format: 'PDF', file: '/handouts/type-2-diabetes.pdf', pages: ['/resource-previews/type-2-diabetes.png'], description: 'A one-page overview of type 2 diabetes, risk factors, and prevention topics.' },
+  { title: 'SACH Diabetes Brochure', category: 'Diabetes', format: 'PDF', file: '/handouts/sach-diabetes-brochure.pdf', pages: ['/resource-previews/sach-diabetes-brochure-1.png', '/resource-previews/sach-diabetes-brochure-2.png'], description: 'A two-page brochure covering diabetes basics and South Asian community health.' },
+];
 
 export default function ResourcesPage() {
-  const [resources, setResources] = useState<PreviewResource[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-  useEffect(() => {
-    loadResources();
-  }, []);
-
-  const loadResources = async () => {
-    try {
-      setIsLoading(true);
-      const result = await BaseCrudService.getAll<PreviewResource>('educationalresources');
-      setResources(result.items);
-    } catch (error) {
-      console.error('Error loading resources:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const categories = ['All', ...Array.from(new Set(resources.map(r => r.topicCategory).filter(Boolean)))];
-  const filteredResources = selectedCategory === 'All' 
-    ? resources 
-    : resources.filter(r => r.topicCategory === selectedCategory);
-
+  const [category, setCategory] = useState('All');
+  const [selected, setSelected] = useState<typeof HANDOUTS[number] | null>(null);
+  const filtered = HANDOUTS.filter(item => category === 'All' || item.category === category);
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="w-full bg-primary text-primary-foreground py-20 md:py-28">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h1 className="font-heading text-4xl md:text-6xl mb-6">
-              Educational Resources
-            </h1>
-            <p className="font-paragraph text-lg md:text-xl opacity-95">
-              Culturally tailored heart health education and prevention resources for South Asian communities
-            </p>
-          </motion.div>
+      <section className="bg-primary text-primary-foreground py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-white/75 mb-3">Resources</p>
+          <h1 className="font-heading text-4xl md:text-5xl mb-4">Educational Handouts</h1>
+          <p className="font-paragraph text-lg text-white/90 leading-relaxed">Explore practical heart health, nutrition, and diabetes resources for South Asian communities.</p>
         </div>
       </section>
-
-      {/* Introduction */}
-      <section className="w-full py-20 md:py-28">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-secondary rounded-3xl p-8 md:p-12">
-              <h2 className="font-heading text-3xl md:text-4xl text-secondary-foreground mb-6 text-center">
-                Why Heart Health Matters for South Asians
-              </h2>
-              <p className="font-paragraph text-base md:text-lg text-foreground leading-relaxed mb-6">
-                South Asians face a significantly higher risk of heart disease compared to other populations. Research shows that South Asians are up to 4 times more likely to develop cardiovascular disease and experience heart attacks at younger ages—often before age 50.
-              </p>
-              <p className="font-paragraph text-base md:text-lg text-foreground leading-relaxed">
-                Understanding your risk factors and taking preventive action can make a significant difference. Our educational resources are designed specifically for South Asian lifestyles, diets, and cultural contexts.
-              </p>
-            </div>
-          </motion.div>
+      <main className="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <div className="flex flex-wrap justify-center gap-3 mb-8" aria-label="Filter handouts">
+          {['All', 'Care Visits', 'Nutrition', 'Diabetes'].map(value => (
+            <button key={value} type="button" aria-pressed={category === value} onClick={() => setCategory(value)} className={`rounded-full px-5 py-2.5 font-paragraph text-sm ${category === value ? 'bg-primary text-white' : 'bg-secondary/50 text-primary hover:bg-secondary'}`}>{value}</button>
+          ))}
         </div>
-      </section>
-
-      {/* Category Filter */}
-      {categories.length > 1 && (
-        <section className="w-full py-8 bg-background">
-          <div className="max-w-[100rem] mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-wrap gap-3 justify-center"
-            >
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`font-paragraph text-base px-6 py-3 rounded-full transition-colors ${
-                    selectedCategory === category
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-secondary text-foreground hover:bg-secondary/80'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </motion.div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map(item => (
+            <article key={item.file} className="rounded-2xl border border-primary/10 bg-white p-5 flex flex-col shadow-sm">
+              <button type="button" onClick={() => setSelected(item)} aria-label={`Preview ${item.title}`} className="w-full h-64 mb-5 rounded-xl bg-secondary/20 p-3 hover:bg-secondary/40 focus-visible:ring-2 focus-visible:ring-primary">
+                <img src={item.pages[0]} alt={`Preview of ${item.title}`} className="w-full h-full object-contain" loading="lazy" />
+              </button>
+              <p className="text-xs font-paragraph text-primary/70 mb-2">{item.category} · {item.format} · {item.pages.length} {item.pages.length === 1 ? 'page' : 'pages'}</p>
+              <h2 className="font-heading text-xl text-primary leading-snug mb-3">{item.title}</h2>
+              <p className="font-paragraph text-sm text-foreground/75 leading-relaxed mb-5 flex-1">{item.description}</p>
+              <div className="flex flex-wrap items-center gap-3">
+                <Button onClick={() => setSelected(item)} className="rounded-lg">View Handout</Button>
+                <a href={item.file} download className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold hover:underline underline-offset-4" aria-label={`Download ${item.title}`}><Download className="w-4 h-4" aria-hidden="true" />Download</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="font-paragraph text-sm text-foreground/60 mt-6 text-center">These materials support education and conversations with your healthcare provider.</p>
+      </main>
+      <section className="bg-secondary/40 py-10 md:py-12">
+        <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+          <MessageSquare className="w-10 h-10 text-primary shrink-0" aria-hidden="true" />
+          <div className="flex-1">
+            <h2 className="font-heading text-2xl text-primary mb-2">Weekly health reminders</h2>
+            <p className="font-paragraph text-base text-foreground/80">Text <strong>HEART</strong> to <strong>866-490-9361</strong> for weekly SMS heart health education and reminders.</p>
           </div>
-        </section>
-      )}
-
-      {/* Resources Grid */}
-      <section className="w-full py-20 md:py-28">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <div className="min-h-[400px]">
-            {isLoading ? null : filteredResources.length > 0 ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {filteredResources.map((resource, index) => (
-                  <motion.div
-                    key={resource._id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-secondary rounded-2xl p-8 flex flex-col"
-                  >
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                        <BookOpen className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                          {resource.resourceTitle}
-                        </h3>
-                        {resource.topicCategory && (
-                          <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                            {resource.topicCategory}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-
-                    <ResourcePreview title={resource.resourceTitle || 'Educational resource'} imageUrl={resource.previewImageUrl} />
-
-                    {resource.contentSummary && (
-                      <p className="font-paragraph text-base text-foreground mb-6 leading-relaxed flex-1">
-                        {resource.contentSummary}
-                      </p>
-                    )}
-
-                    {resource.downloadableFileUrl ? (
-                      <a
-                        href={resource.downloadableFileUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-paragraph text-base px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-                      >
-                        <Download className="w-4 h-4" />
-                        Download Resource
-                      </a>
-                    ) : (
-                      <PendingDownload />
-                    )}
-                  </motion.div>
-                ))}
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {/* Default Educational Content */}
-                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Health Screenings for Cardiovascular Risk Factors
-                      </h3>
-                      <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                        Heart Health Basics
-                      </span>
-                    </div>
-                  </div>
-                  <ResourcePreview title="Health Screenings for Cardiovascular Risk Factors" />
-                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
-                    Learn what blood pressure numbers mean, why they matter, and how to maintain healthy levels through lifestyle changes tailored to South Asian diets and routines.
-                  </p>
-                  <PendingDownload />
-                </div>
-
-                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Heart-Healthy South Asian Cooking
-                      </h3>
-                      <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                        Nutrition & Diet
-                      </span>
-                    </div>
-                  </div>
-                  <ResourcePreview title="Heart-Healthy South Asian Cooking" />
-                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
-                    Discover how to prepare traditional South Asian dishes in heart-healthy ways, with tips for reducing sodium, choosing healthier oils, and balancing your meals.
-                  </p>
-                  <PendingDownload />
-                </div>
-
-                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Recognizing Heart Attack Warning Signs
-                      </h3>
-                      <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                        Emergency Awareness
-                      </span>
-                    </div>
-                  </div>
-                  <ResourcePreview title="Recognizing Heart Attack Warning Signs" />
-                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
-                    Know the warning signs of a heart attack and what to do in an emergency. Early recognition and action can save lives.
-                  </p>
-                  <PendingDownload />
-                </div>
-
-                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Physical Activity for Heart Health
-                      </h3>
-                      <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                        Lifestyle & Exercise
-                      </span>
-                    </div>
-                  </div>
-                  <ResourcePreview title="Physical Activity for Heart Health" />
-                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
-                    Simple, practical ways to incorporate physical activity into your daily routine, even with a busy schedule.
-                  </p>
-                  <PendingDownload />
-                </div>
-
-                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Managing Stress & Mental Health
-                      </h3>
-                      <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                        Mental Wellness
-                      </span>
-                    </div>
-                  </div>
-                  <ResourcePreview title="Managing Stress & Mental Health" />
-                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
-                    Understand the connection between stress and heart health, with culturally relevant strategies for managing stress and supporting mental wellness.
-                  </p>
-                  <PendingDownload />
-                </div>
-
-                <div className="bg-secondary rounded-2xl p-8 flex flex-col">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-2">
-                        Diabetes & Heart Disease Connection
-                      </h3>
-                      <span className="inline-block bg-primary text-primary-foreground font-paragraph text-xs px-3 py-1 rounded-full">
-                        Risk Factors
-                      </span>
-                    </div>
-                  </div>
-                  <ResourcePreview title="Diabetes & Heart Disease Connection" />
-                  <p className="font-paragraph text-base text-foreground leading-relaxed mb-6 flex-1">
-                    Learn about the strong link between diabetes and cardiovascular disease, and how to manage both conditions effectively.
-                  </p>
-                  <PendingDownload />
-                </div>
-              </motion.div>
-            )}
-          </div>
+          <Button asChild className="rounded-lg shrink-0"><a href="sms:+18664909361?&body=HEART">Text HEART</a></Button>
         </div>
       </section>
-
-      {/* Additional Support */}
-      <section className="w-full py-20 md:py-28 bg-secondary">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="font-heading text-3xl md:text-5xl text-secondary-foreground mb-6">
-              Need More Information?
-            </h2>
-            <p className="font-paragraph text-base md:text-lg text-foreground mb-10 leading-relaxed">
-              Visit one of our community health sites to speak with trained volunteers, get screened, and receive personalized education and resources.
-            </p>
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-paragraph text-base px-8 py-6 h-auto rounded-lg"
-            >
-              <a href="/health-sites">Find a Health Site</a>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
+      <div className="max-w-6xl mx-auto px-6 py-8 text-center font-paragraph text-sm text-foreground/75">Looking for a primary care provider? <Link to="/resources/pcp-search" className="text-primary font-semibold hover:underline">Visit PCP Search</Link></div>
       <Footer />
+      <Dialog open={selected !== null} onOpenChange={open => { if (!open) setSelected(null); }}>
+        <DialogContent className="w-[calc(100%-2rem)] max-w-4xl max-h-[90vh] flex flex-col overflow-hidden rounded-xl">
+          <DialogTitle className="font-heading text-xl pr-6">{selected?.title}</DialogTitle>
+          <DialogDescription>Read the complete handout below, or download the original file.</DialogDescription>
+          <div className="overflow-y-auto min-h-0 space-y-5">
+            {selected?.pages.map((page, index) => <img key={page} src={page} alt={`${selected.title}, page ${index + 1} of ${selected.pages.length}`} className="w-full h-auto bg-white" />)}
+          </div>
+          {selected && <a href={selected.file} download className="text-primary font-semibold text-sm hover:underline" aria-label={`Download original ${selected.title}`}>Download original {selected.format}</a>}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

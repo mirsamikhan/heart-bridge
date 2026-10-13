@@ -7,6 +7,7 @@ import AboutPage from '@/components/pages/AboutPage';
 import GetScreenedPage from '@/components/pages/GetScreenedPage';
 import VolunteerPage from '@/components/pages/VolunteerPage';
 import ResourcesPage from '@/components/pages/ResourcesPage';
+import PcpSearchPage from '@/components/pages/PcpSearchPage';
 import ContactPage from '@/components/pages/ContactPage';
 import DonatePage from '@/components/pages/DonatePage';
 import LeadershipApplicationPage from '@/components/pages/LeadershipApplicationPage';
@@ -63,10 +64,20 @@ const router = createBrowserRouter([
       },
       {
         path: "resources",
-        element: <ResourcesPage />,
+        element: <Navigate to="/resources/educational-handouts" replace />,
         routeMetadata: {
           pageIdentifier: 'resources',
         },
+      },
+      {
+        path: "resources/educational-handouts",
+        element: <ResourcesPage />,
+        routeMetadata: { pageIdentifier: 'educational-handouts' },
+      },
+      {
+        path: "resources/pcp-search",
+        element: <PcpSearchPage />,
+        routeMetadata: { pageIdentifier: 'pcp-search' },
       },
       {
         path: "contact",

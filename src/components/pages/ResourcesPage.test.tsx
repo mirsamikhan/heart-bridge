@@ -1,62 +1,40 @@
-import { afterEach, beforeEach, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, expect, it } from 'vitest';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import ResourcesPage from './ResourcesPage';
-import { BaseCrudService } from '@/integrations';
+import ResourcesPage, { HANDOUTS } from './ResourcesPage';
 
-vi.mock('@/integrations', () => ({ BaseCrudService: { getAll: vi.fn() } }));
+afterEach(cleanup);
+function renderPage() { render(<MemoryRouter initialEntries={['/resources/educational-handouts']}><ResourcesPage /></MemoryRouter>); }
 
-beforeEach(() => {
-  vi.stubGlobal('IntersectionObserver', class {
-    observe() {}
-    unobserve() {}
-    disconnect() {}
-  });
-});
-
-afterEach(() => {
-  cleanup();
-  vi.clearAllMocks();
-  vi.unstubAllGlobals();
-});
-
-function renderPage() {
-  render(<MemoryRouter><ResourcesPage /></MemoryRouter>);
-}
-
-it('displays a real thumbnail and retains the original download link, falling back if the image fails', async () => {
-  vi.mocked(BaseCrudService.getAll).mockResolvedValue({ items: [
-    { _id: 'one', resourceTitle: 'Heart Health', previewImageUrl: '/resource-previews/heart.jpg', downloadableFileUrl: '/handouts/heart.pdf' },
-  ] } as any);
+it('shows the five supplied handouts with uncropped previews and original downloads', () => {
   renderPage();
-  const image = await screen.findByRole('img', { name: 'First-page preview of Heart Health' });
-  expect(image).toHaveAttribute('src', '/resource-previews/heart.jpg');
-  const download = screen.getByRole('link', { name: 'Download Resource' });
-  expect(download).toHaveAttribute('href', '/handouts/heart.pdf');
-  expect(download).toHaveAttribute('target', '_blank');
-  fireEvent.error(image);
-  expect(screen.getByRole('img', { name: 'Preview coming soon for Heart Health' })).toBeInTheDocument();
-  expect(download).toHaveAttribute('href', '/handouts/heart.pdf');
+  expect(screen.getAllByRole('img', { name: /^Preview of/ })).toHaveLength(5);
+  for (const item of HANDOUTS) {
+    expect(screen.getByRole('link', { name: `Download ${item.title}`, exact: true })).toHaveAttribute('href', item.file);
+    expect(screen.getByRole('link', { name: `Download ${item.title}`, exact: true })).toHaveAttribute('download');
+  }
+  fireEvent.click(screen.getByRole('button', { name: 'Nutrition', exact: true }));
+  expect(screen.getAllByRole('img', { name: /^Preview of/ })).toHaveLength(2);
+  expect(screen.queryByRole('heading', { name: 'SACH Diabetes Brochure' })).not.toBeInTheDocument();
 });
 
-it('shows placeholders while preserving category filtering and downloadable files', async () => {
-  vi.mocked(BaseCrudService.getAll).mockResolvedValue({ items: [
-    { _id: 'one', resourceTitle: 'Heart Health', topicCategory: 'Basics', downloadableFileUrl: '/handouts/heart.pdf' },
-    { _id: 'two', resourceTitle: 'Cooking', topicCategory: 'Nutrition' },
-  ] } as any);
+it('opens both brochure pages and closes the accessible viewer', () => {
   renderPage();
-  expect(await screen.findByRole('img', { name: 'Preview coming soon for Heart Health' })).toBeInTheDocument();
-  expect(screen.getByRole('img', { name: 'Preview coming soon for Cooking' })).toBeInTheDocument();
-  expect(screen.getByRole('button', { name: 'Download coming soon' })).toBeDisabled();
-  fireEvent.click(screen.getByRole('button', { name: 'Basics' }));
-  expect(screen.queryByRole('img', { name: 'Preview coming soon for Cooking' })).not.toBeInTheDocument();
-  expect(screen.getByRole('link', { name: 'Download Resource' })).toHaveAttribute('href', '/handouts/heart.pdf');
+  fireEvent.click(screen.getByRole('button', { name: 'Preview SACH Diabetes Brochure' }));
+  const dialog = screen.getByRole('dialog', { name: 'SACH Diabetes Brochure' });
+  expect(within(dialog).getAllByRole('img')).toHaveLength(2);
+  expect(within(dialog).getByRole('link', { name: 'Download original SACH Diabetes Brochure' })).toHaveAttribute('href', '/handouts/sach-diabetes-brochure.pdf');
+  fireEvent.click(within(dialog).getByRole('button', { name: 'Close' }));
+  expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
 });
 
-it('gives all six default handouts placeholders without inventing download links', async () => {
-  vi.mocked(BaseCrudService.getAll).mockResolvedValue({ items: [] } as any);
+it('provides the HEART reminder link and Resources subpages on mobile', () => {
   renderPage();
-  expect(await screen.findAllByRole('img', { name: /^Preview coming soon for/ })).toHaveLength(6);
-  expect(screen.getAllByRole('button', { name: 'Download coming soon' })).toHaveLength(6);
-  expect(screen.queryByRole('link', { name: 'Download Resource' })).not.toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'Text HEART' })).toHaveAttribute('href', 'sms:+18664909361?&body=HEART');
+  fireEvent.click(screen.getByRole('button', { name: 'Toggle menu' }));
+  const menus = screen.getAllByText('Resources', { selector: 'summary' });
+  fireEvent.click(menus[1]);
+  const details = menus[1].closest('details')!;
+  expect(within(details).getByRole('link', { name: 'Educational Handouts', hidden: true })).toHaveAttribute('href', '/resources/educational-handouts');
+  expect(within(details).getByRole('link', { name: 'PCP Search', hidden: true })).toHaveAttribute('href', '/resources/pcp-search');
 });

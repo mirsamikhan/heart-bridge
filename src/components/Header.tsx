@@ -1,7 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+function ResourcesMenu({ mobile = false, onNavigate }: { mobile?: boolean; onNavigate?: () => void }) {
+  const ref = useRef<HTMLDetailsElement>(null);
+  const location = useLocation();
+  useEffect(() => {
+    if (ref.current) ref.current.open = false;
+  }, [location.pathname]);
+  useEffect(() => {
+    const close = (event: PointerEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) ref.current.open = false;
+    };
+    document.addEventListener('pointerdown', close);
+    return () => document.removeEventListener('pointerdown', close);
+  }, []);
+  return (
+    <details ref={ref} className="relative group" onKeyDown={event => {
+      if (event.key === 'Escape' && ref.current) { ref.current.open = false; ref.current.querySelector('summary')?.focus(); }
+    }}>
+      <summary className={`list-none [&::-webkit-details-marker]:hidden cursor-pointer flex items-center gap-1.5 font-paragraph ${mobile ? 'text-base' : 'text-sm'} ${location.pathname.startsWith('/resources') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'}`}>
+        Resources <ChevronDown className="w-4 h-4 group-open:rotate-180 transition-transform" aria-hidden="true" />
+      </summary>
+      <div className={mobile ? 'flex flex-col gap-3 pl-4 pt-3' : 'absolute top-full left-0 mt-3 w-60 rounded-xl border border-secondary bg-background shadow-lg p-2 flex flex-col gap-1'}>
+        {[
+          { to: '/resources/educational-handouts', label: 'Educational Handouts' },
+          { to: '/resources/pcp-search', label: 'PCP Search' },
+        ].map(item => <Link key={item.to} to={item.to} onClick={onNavigate} aria-current={location.pathname === item.to ? 'page' : undefined} className="font-paragraph text-sm text-primary px-3 py-2 rounded-lg hover:bg-secondary/40 focus-visible:bg-secondary/40">{item.label}</Link>)}
+      </div>
+    </details>
+  );
+}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +71,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
-            {primaryLinks.map((link) => (
+            {primaryLinks.map((link) => link.path === '/resources' ? <ResourcesMenu key={link.path} /> : (
               <Link
                 key={link.path}
                 to={link.path}
@@ -89,7 +119,7 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-6 pb-4 border-t border-secondary pt-4">
             <div className="flex flex-col gap-4">
-              {primaryLinks.map((link) => (
+              {primaryLinks.map((link) => link.path === '/resources' ? <ResourcesMenu key={link.path} mobile onNavigate={() => setIsMenuOpen(false)} /> : (
                 <Link
                   key={link.path}
                   to={link.path}
