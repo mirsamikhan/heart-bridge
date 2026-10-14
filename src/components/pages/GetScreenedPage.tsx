@@ -1,33 +1,53 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, ClipboardCheck, Heart, Shield, MapPin, Calendar, Building } from 'lucide-react';
-import { LoadingSpinner } from '@/components/ui/loading-spinner';
-import { BaseCrudService } from '@/integrations';
+import { Clock, ClipboardCheck, Heart, Shield, MapPin, Building } from 'lucide-react';
 import { HealthSites } from '@/entities';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+const sites: HealthSites[] = [
+  {
+    "_id": "health-site-1",
+    "locationName": "Islamic Center of Irving",
+    "address": "2555 Esters Rd, Irving, TX 75062",
+    "operatingHours": "Every Friday | 1:30–4:30 PM",
+    "description": "Free community health screenings and wellness education offered every Friday at Islamic Center of Irving.",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Islamic%20Center%20of%20Irving%2C%202555%20Esters%20Rd%2C%20Irving%2C%20TX%2075062"
+  },
+  {
+    "_id": "health-site-2",
+    "locationName": "Gurdwara Sikh Sangat",
+    "address": "200 E Euless Blvd, Euless, TX 76040",
+    "operatingHours": "Select Sundays",
+    "description": "Free community health screenings and wellness education offered on select Sundays at Gurdwara Sikh Sangat.",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Gurdwara%20Sikh%20Sangat%2C%20200%20E%20Euless%20Blvd%2C%20Euless%2C%20TX%2076040"
+  },
+  {
+    "_id": "health-site-3",
+    "locationName": "Islamic Association of North Texas",
+    "address": "840 Abrams Rd, Richardson, TX 75081",
+    "operatingHours": "Every Friday | 1:00–4:00 PM",
+    "description": "Free community health screenings and wellness education offered every Friday at Islamic Association of North Texas.",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Islamic%20Association%20of%20North%20Texas%2C%20840%20Abrams%20Rd%2C%20Richardson%2C%20TX%2075081"
+  },
+  {
+    "_id": "health-site-4",
+    "locationName": "Madinah Masjid of Carrollton",
+    "address": "2180 Old Denton Rd, Carrollton, TX 75006",
+    "operatingHours": "Every Friday | 1:30–3:30 PM",
+    "description": "Free community health screenings and wellness education offered every Friday at Madinah Masjid of Carrollton.",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Madinah%20Masjid%20of%20Carrollton%2C%202180%20Old%20Denton%20Rd%2C%20Carrollton%2C%20TX%2075006"
+  },
+  {
+    "_id": "health-site-5",
+    "locationName": "Barkaat Ul Quran",
+    "address": "555 W Airport Fwy #178, Irving, TX 75062",
+    "operatingHours": "Last Friday of Every Month | 1:30–3:00 PM",
+    "description": "Free community health screenings and wellness education offered monthly at Barkaat Ul Quran.",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Barkaat%20Ul%20Quran%2C%20555%20W%20Airport%20Fwy%20%23178%2C%20Irving%2C%20TX%2075062"
+  }
+];
+
 export default function GetScreenedPage() {
-  const [sites, setSites] = useState<HealthSites[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    loadSites();
-  }, []);
-
-  const loadSites = async () => {
-    try {
-      setIsLoading(true);
-      const result = await BaseCrudService.getAll<HealthSites>('healthsites');
-      const activeSites = result.items.filter(site => site.isActive);
-      setSites(activeSites);
-    } catch (error) {
-      console.error('Error loading health sites:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -207,18 +227,13 @@ export default function GetScreenedPage() {
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-10">
             <h2 className="font-heading text-3xl md:text-5xl text-primary mb-4">
-              Weekly Health Sites
+              Community Health Sites
             </h2>
             <p className="font-paragraph text-base md:text-lg text-foreground">
               Find a DilSe community health site near you across the Dallas–Fort Worth area
             </p>
           </div>
           <div>
-            {isLoading ? (
-              <div role="status">
-                <LoadingSpinner message="Loading health sites..." className="flex justify-center py-8" />
-              </div>
-            ) : sites.length > 0 ? (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -282,22 +297,7 @@ export default function GetScreenedPage() {
                   </motion.div>
                 ))}
               </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="text-center py-8"
-              >
-                <Calendar className="w-16 h-16 text-secondary mx-auto mb-6" />
-                <h3 className="font-heading text-2xl text-foreground mb-4">
-                  Health Sites Coming Soon
-                </h3>
-                <p className="font-paragraph text-base text-foreground max-w-md mx-auto">
-                  We're currently setting up community health sites across DFW. Check back soon for locations and times.
-                </p>
-              </motion.div>
-            )}
+
           </div>
         </div>
       </section>
