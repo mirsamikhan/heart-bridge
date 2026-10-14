@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { marked } from 'marked';
+import { marked, Renderer } from 'marked';
 import { Calendar, User, Clock, ArrowLeft, Share2, BookOpen } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getPostBySlug } from '@/lib/blog';
+import { getPostBySlug, useBlogPosts, blogAssetUrl } from '@/lib/blog';
 
 function formatDate(dateStr: string): string {
   try {
@@ -27,7 +27,8 @@ function formatDate(dateStr: string): string {
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
-  const post = useMemo(() => (slug ? getPostBySlug(slug) : undefined), [slug]);
+  const posts = useBlogPosts();
+  const post = useMemo(() => (slug ? getPostBySlug(posts, slug) : undefined), [posts, slug]);
 
   // Compute read time (avg 200 words/min)
   const readingTime = useMemo(() => {
@@ -41,7 +42,13 @@ export default function BlogPostPage() {
   const parsedHtml = useMemo(() => {
     if (!post) return '';
     try {
+      const renderer = new Renderer();
+      const renderImage = renderer.image;
+      renderer.image = function (token) {
+        return renderImage.call(this, { ...token, href: blogAssetUrl(token.href) });
+      };
       return marked.parse(post.content, {
+        renderer,
         gfm: true,
         breaks: true,
       }) as string;
@@ -149,7 +156,7 @@ export default function BlogPostPage() {
             {post.image && (
               <div className="mb-12 rounded-2xl overflow-hidden shadow-md border border-secondary/40 aspect-[16/9] bg-secondary/20">
                 <img
-                  src={post.image}
+                  src={blogAssetUrl(post.image)}
                   alt={post.title}
                   className="w-full h-full object-cover"
                 />

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, BookOpen, Search } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getAllPosts, type BlogPost } from '@/lib/blog';
+import { getAllPosts, useBlogPosts, blogAssetUrl, type BlogPost } from '@/lib/blog';
 
 function formatDate(dateStr: string): string {
   try {
@@ -26,7 +26,8 @@ function formatDate(dateStr: string): string {
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const allPosts = useMemo(() => getAllPosts(), []);
+  const posts = useBlogPosts();
+  const allPosts = useMemo(() => getAllPosts(posts), [posts]);
 
   const filteredPosts = useMemo(() => {
     if (!searchQuery.trim()) return allPosts;
@@ -104,7 +105,7 @@ export default function BlogPage() {
                     {post.image ? (
                       <Link to={`/blog/${post.slug}`} className="block relative aspect-[16/9] overflow-hidden bg-secondary/30">
                         <img
-                          src={post.image}
+                          src={blogAssetUrl(post.image)}
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />

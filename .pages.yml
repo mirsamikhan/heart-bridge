@@ -1,0 +1,59 @@
+media:
+  - name: blog_images
+    label: Blog Images
+    input: public/blog-images
+    output: /blog-images
+    extensions: [jpg, jpeg, png, webp, gif, avif]
+    rename: safe
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: src/content/blog
+    subfolders: false
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields: [title, date, author, draft]
+      sort: [date, title]
+      search: [title, author, excerpt]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publication Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: author
+        label: Author
+        type: string
+        default: DilSe Health Team
+      - name: excerpt
+        label: Short Summary
+        type: text
+        description: One or two sentences shown on the blog list.
+      - name: image
+        label: Cover Image
+        type: image
+        options:
+          media: blog_images
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+        description: Turn on to save without publishing. Turn off to publish.
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          format: markdown
+          media: blog_images

@@ -12,6 +12,7 @@ import ContactPage from '@/components/pages/ContactPage';
 import DonatePage from '@/components/pages/DonatePage';
 import LeadershipApplicationPage from '@/components/pages/LeadershipApplicationPage';
 import BlogPage from '@/components/pages/BlogPage';
+import { BlogPostsContext, type BlogPost } from '@/lib/blog';
 import BlogPostPage from '@/components/pages/BlogPostPage';
 
 // Layout component that includes ScrollToTop
@@ -124,10 +125,12 @@ const router = createBrowserRouter([
   basename: import.meta.env.BASE_NAME,
 });
 
-export default function AppRouter() {
+export default function AppRouter({ blogPosts = [] }: { blogPosts?: BlogPost[] }) {
   return (
     <MemberProvider>
-      <RouterProvider router={router} />
+      <BlogPostsContext.Provider value={blogPosts}>
+        <RouterProvider router={router} />
+      </BlogPostsContext.Provider>
     </MemberProvider>
   );
 }

@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
+import { createRequire } from 'node:module';
+// Use Astro's YAML dependency to read the same frontmatter format as the collection.
+const { load } = createRequire(import.meta.resolve('astro/package.json'))('js-yaml');
 const base = '/heart-bridge/';
 const dist = new URL('../dist/', import.meta.url);
 const router = await readFile(new URL('../src/components/Router.tsx', import.meta.url), 'utf8');
@@ -32,5 +35,16 @@ for (const file of files.filter(file => file.endsWith('.css'))) {
 }
 assert(fontCount > 0);
 const posts = await readdir(new URL('../src/content/blog/', import.meta.url));
-for (const file of posts.filter(file => file.endsWith('.md'))) await access(new URL(`blog/${file.slice(0, -3)}/index.html`, dist));
+for (const file of posts.filter(file => file.endsWith('.md'))) {
+  const source = await readFile(new URL(`../src/content/blog/${file}`, import.meta.url), 'utf8');
+  const frontmatter = source.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+  assert(frontmatter, `Missing blog frontmatter: ${file}`);
+  const data = load(frontmatter[1]);
+  const page = new URL(`blog/${file.slice(0, -3)}/index.html`, dist);
+  if (data.draft === true) {
+    await assert.rejects(access(page), { code: 'ENOENT' }, `Draft page was emitted: ${file}`);
+  } else {
+    await access(page);
+  }
+}
 console.log(`Verified route entry points, 404 shell, 7 local images, ${fontCount} font references, and blog deep links.`);
