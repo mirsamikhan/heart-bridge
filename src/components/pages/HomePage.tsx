@@ -321,7 +321,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Community video */}
-      <section aria-labelledby="community-video-heading" className="w-full py-16 md:py-20 bg-background">
+      <section aria-labelledby="community-video-heading" className="w-full py-12 md:py-16 bg-secondary/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 id="community-video-heading" className="font-heading text-3xl md:text-4xl text-primary">
@@ -329,11 +329,12 @@ export default function HomePage() {
             </h2>
           </div>
           <video
-            className="block w-full h-auto rounded-3xl shadow-xl bg-black"
+            className="block w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-xl bg-black"
             controls
             muted
+            autoPlay
             playsInline
-            preload="none"
+            preload="metadata"
             poster="/videos/community-in-action-poster.jpg"
             aria-label="Silent video of the TANTEX 5K Run in Frisco"
           >
@@ -448,16 +449,26 @@ export default function HomePage() {
             Our Partners
           </h2>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <div className="w-full max-w-2xl bg-white border border-secondary rounded-2xl flex items-center justify-center p-6 md:p-8">
+            <div className="w-[calc((100%_-_1rem)/2)] md:w-[calc((100%_-_4.5rem)/4)] h-28 md:h-32 bg-white border border-secondary rounded-2xl flex items-center justify-center p-4">
               <img
                 src="/partners/dallas-pediatrics-id-associates.jpg"
                 alt="Dallas Pediatrics &amp; ID Associates"
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
                 width={1705}
                 height={346}
                 loading="lazy"
               />
             </div>
+            {[2, 3, 4].map(partner => (
+              <div
+                key={partner}
+                aria-label={`Partner logo placeholder ${partner}`}
+                className="w-[calc((100%_-_1rem)/2)] md:w-[calc((100%_-_4.5rem)/4)] h-28 md:h-32 bg-secondary/30 border border-secondary rounded-2xl flex flex-col items-center justify-center gap-2 px-4 text-center"
+              >
+                <span className="font-heading text-xl text-primary">Partner Logo</span>
+                <span className="font-paragraph text-sm text-foreground/60">Coming soon</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
