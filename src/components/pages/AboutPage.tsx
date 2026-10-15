@@ -74,7 +74,7 @@ export default function AboutPage() {
                 { name: 'Samaira Srivastva', role: 'Administrative Officer', photo: '/officers/samaira-srivastva-headshot.png' },
                 { name: 'Ayesha Sharif', role: 'Scheduling Officer', photo: '/officers/ayesha-sharif-headshot.png' },
                 { name: 'Harneet Bains', role: 'Training Officer', photo: undefined },
-                { name: 'Samatha Belatur', role: 'Community Outreach Officer', photo: undefined },
+                { name: 'Samatha Belatur', role: 'Community Outreach Officer', photo: '/officers/samatha-belatur-headshot.png' },
               ].map(member => (
                 <article key={member.name} className={`bg-white border border-primary/10 rounded-2xl p-6 text-center shadow-sm ${member.name === 'Samatha Belatur' ? 'lg:col-start-2' : ''}`}>
                   {member.photo ? (
