@@ -321,11 +321,11 @@ export default function HomePage() {
         </div>
       </section>
       {/* Community video */}
-      <section aria-labelledby="community-video-heading" className="w-full py-12 md:py-16 bg-secondary/30">
+      <section aria-labelledby="community-video-heading" className="w-full py-12 md:py-16 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 id="community-video-heading" className="font-heading text-3xl md:text-4xl text-primary">
-              Our Community in Action
+              Our Mission in Action
             </h2>
           </div>
           <video
