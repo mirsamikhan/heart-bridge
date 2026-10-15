@@ -324,31 +324,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Important Note */}
-      <section className="w-full py-6 md:py-8">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-secondary rounded-3xl p-8 md:p-12 border-l-4 border-primary"
-          >
-            <h3 className="font-heading text-2xl md:text-3xl text-secondary-foreground mb-6">
-              Important Information
-            </h3>
-            <div className="space-y-4">
-              <p className="font-paragraph text-base text-foreground leading-relaxed">
-                <strong>DilSe is a public health and prevention program, not a clinical care provider.</strong> We provide education and screening support but do not replace medical care. Volunteers do not provide medical advice.
-              </p>
-              <p className="font-paragraph text-base text-foreground leading-relaxed">
-                Participation in DilSe is completely free and voluntary. All data collected may be used in de-identified form for public health research and quality improvement initiatives.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
