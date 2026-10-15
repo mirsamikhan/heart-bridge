@@ -150,7 +150,7 @@ export default function HomePage() {
             >
 
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.1] mb-6">
-                DilSe: <br/>
+                DilSe <br/>
                 <span className="text-secondary">South Asian Heart & Brain Program</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
@@ -297,7 +297,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="font-heading text-3xl md:text-4xl text-primary mb-8">
-                  Rooted in our community
+                  About DilSe
                 </h2>
                 <p className="text-xl text-foreground/80 leading-relaxed mb-8">
                   Developed in collaboration with UT Southwestern physicians, DilSe brings culturally tailored prevention into the places our community already gathers.
