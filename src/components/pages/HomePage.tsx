@@ -81,6 +81,7 @@ const SLIDESHOW_IMAGES = [
   { src: '/homepage/community-4.jpg', alt: 'DilSe outreach table outside a community building' },
   { src: '/homepage/community-5.jpg', alt: 'Community members practice CPR with training mannequins' },
   { src: '/homepage/community-6.jpg', alt: 'A volunteer prepares a blood pressure cuff for a participant' },
+  { src: '/homepage/community-7.jpg', alt: 'DilSe volunteers and community members at an outdoor health screening table' },
 ];
 
 export default function HomePage() {
