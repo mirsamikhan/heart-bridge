@@ -82,6 +82,7 @@ const SLIDESHOW_IMAGES = [
   { src: '/homepage/community-5.jpg', alt: 'Community members practice CPR with training mannequins' },
   { src: '/homepage/community-6.jpg', alt: 'A volunteer prepares a blood pressure cuff for a participant' },
   { src: '/homepage/community-7.jpg', alt: 'DilSe volunteers and community members at an outdoor health screening table' },
+  { src: '/homepage/community-8.jpg', alt: 'Three volunteers at an outdoor UT Southwestern community health outreach table' },
 ];
 
 export default function HomePage() {
@@ -335,20 +336,19 @@ export default function HomePage() {
               Our Mission in Action
             </h2>
           </div>
-          <video
-            className="block w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-xl bg-black"
-            controls
-            muted
-            autoPlay
-            playsInline
-            preload="metadata"
-            poster="/videos/community-in-action-poster.jpg"
-            aria-label="Silent video of the TANTEX 5K Run in Frisco"
-          >
-            <source src="/videos/community-in-action.mp4" type="video/mp4" />
-            Your browser does not support embedded video.{' '}
-            <a href="/videos/community-in-action.mp4">Watch the community video</a>.
-          </video>
+          <div className="w-full max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl bg-black">
+            <iframe
+              className="block w-full aspect-video min-h-[200px] border-0"
+              src="https://www.youtube-nocookie.com/embed/Q1qVjD6BJkQ?autoplay=1&mute=1&playsinline=1&controls=1&rel=0"
+              title="DilSe — Our Mission in Action at the TANTEX 5K Run"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-center font-paragraph text-sm text-primary mt-4">
+            <a href="https://youtu.be/Q1qVjD6BJkQ" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Watch on YouTube</a>
+          </p>
         </div>
       </section>
       <section className="w-full py-16 md:py-20 bg-secondary-foreground">
