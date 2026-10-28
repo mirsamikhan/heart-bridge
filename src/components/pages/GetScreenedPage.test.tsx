@@ -25,7 +25,7 @@ function renderPage() {
 describe('combined screening page', () => {
   it('shows the five approved screening locations and their schedules', () => {
     renderPage();
-    expect(screen.getByRole('heading', { name: "What's Included" })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Education & Follow-Up' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Your Privacy & Consent' })).toBeInTheDocument();
     for (const name of ['Islamic Center of Irving', 'Gurdwara Sikh Sangat', 'Islamic Association of North Texas', 'Madinah Masjid of Carrollton', 'Barkaat Ul Quran']) {
       expect(screen.getByRole('heading', { name })).toBeInTheDocument();

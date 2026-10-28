@@ -114,10 +114,10 @@ export default function GetScreenedPage() {
                 <Heart className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-xl md:text-2xl text-secondary-foreground mb-4">
-                Health Screenings for Cardiovascular Risk Factors
+                Free Health Screenings
               </h3>
               <p className="font-paragraph text-base text-foreground">
-                Free health screenings for cardiovascular risk factors conducted by trained volunteers.
+                Trained volunteers check cardiovascular risk factors using calibrated equipment.
               </p>
             </motion.div>
 
@@ -135,7 +135,7 @@ export default function GetScreenedPage() {
                 Risk Assessment
               </h3>
               <p className="font-paragraph text-base text-foreground">
-                Brief cardiovascular risk screening to identify potential concerns.
+                A brief questionnaire helps identify your heart health risk factors.
               </p>
             </motion.div>
           </div>
@@ -153,7 +153,7 @@ export default function GetScreenedPage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="font-heading text-3xl md:text-4xl text-primary mb-8 text-center">
-              What's Included
+              Education & Follow-Up
             </h2>
             <div className="bg-secondary rounded-3xl p-8 md:p-12">
               <div className="space-y-6">
@@ -161,34 +161,10 @@ export default function GetScreenedPage() {
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Health Screenings for Cardiovascular Risk Factors
-                    </h3>
-                    <p className="font-paragraph text-base text-foreground">
-                      Comprehensive health screenings for cardiovascular risk factors using calibrated equipment
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Cardiovascular Risk Screening
-                    </h3>
-                    <p className="font-paragraph text-base text-foreground">
-                      Brief questionnaire to assess your heart health risk factors
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-heading text-xl text-secondary-foreground mb-2">
                       Health Education
                     </h3>
                     <p className="font-paragraph text-base text-foreground">
-                      Culturally tailored information about heart health and prevention
+                      Culturally tailored guidance and take-home materials about heart health, nutrition, and lifestyle.
                     </p>
                   </div>
                 </div>
@@ -205,17 +181,7 @@ export default function GetScreenedPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-heading text-xl text-secondary-foreground mb-2">
-                      Educational Resources
-                    </h3>
-                    <p className="font-paragraph text-base text-foreground">
-                      Take-home materials about heart health, nutrition, and lifestyle
-                    </p>
-                  </div>
-                </div>
+
               </div>
             </div>
           </motion.div>
