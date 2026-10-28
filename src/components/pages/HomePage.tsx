@@ -163,7 +163,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center lg:justify-start"
             >
               <Button 
                 asChild 
@@ -185,6 +185,13 @@ export default function HomePage() {
                 >
                   Volunteer With Us
                 </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="bg-secondary text-primary hover:bg-secondary/90 font-bold text-lg px-7 py-4 h-auto rounded-xl shadow-lg transition-all duration-300"
+              >
+                <Link to="/donate">Donate</Link>
               </Button>
             </motion.div>
           </div>
