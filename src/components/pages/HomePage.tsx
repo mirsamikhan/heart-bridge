@@ -447,6 +447,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section aria-labelledby="health-reminders-heading" className="w-full py-12 md:py-16 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-2xl">
+            <h2 id="health-reminders-heading" className="font-heading text-3xl md:text-4xl text-primary mb-3">Weekly Health Reminders</h2>
+            <p className="font-paragraph text-lg text-foreground leading-relaxed">Text <strong>HEART</strong> to <a href="sms:+18664909361?&body=HEART" className="text-primary font-semibold underline underline-offset-4">(866) 490-9361</a> for weekly health reminders.</p>
+          </div>
+          <Button asChild size="lg" className="font-semibold px-7 py-4 h-auto rounded-xl shrink-0">
+            <a href="sms:+18664909361?&body=HEART">Text HEART</a>
+          </Button>
+        </div>
+      </section>
       {/* --- SERVICES & PATHWAYS --- */}
       {/* Design: Light, airy, card-based grid. */}
       {/* Partner logos */}
