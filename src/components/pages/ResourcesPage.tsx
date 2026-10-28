@@ -62,7 +62,7 @@ export default function ResourcesPage() {
           <Button asChild className="rounded-lg shrink-0"><a href="sms:+18664909361?&body=HEART">Text HEART</a></Button>
         </div>
       </section>
-      <div className="max-w-6xl mx-auto px-6 py-8 text-center font-paragraph text-sm text-foreground/75">Looking for a primary care provider? <Link to="/resources/pcp-search" className="text-primary font-semibold hover:underline">Visit PCP Search</Link></div>
+      <div className="max-w-6xl mx-auto px-6 py-8 text-center font-paragraph text-sm text-foreground/75">Looking for a healthcare provider? <Link to="/resources/pcp-search" className="text-primary font-semibold hover:underline">Visit Physician Finder</Link></div>
       <Footer />
       <Dialog open={selected !== null} onOpenChange={open => { if (!open) setSelected(null); }}>
         <DialogContent className="w-[calc(100%-2rem)] max-w-4xl max-h-[90vh] flex flex-col overflow-hidden rounded-xl">

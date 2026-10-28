@@ -1,0 +1,4119 @@
+[
+  {
+    "id": "0",
+    "name": "Amarinder S. Bindra, MD",
+    "specialty": "Advanced Heart Failure & Transplant Cardiology",
+    "city": "Dallas",
+    "phone": "(214) 820-6856",
+    "languages": [
+      "Punjbai",
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "1",
+    "name": "Aasia I. Ghazi, MD",
+    "specialty": "Allergy & Immunology",
+    "city": "Plano",
+    "phone": "972-636-1750",
+    "languages": [
+      "English",
+      "Kashmiri",
+      "Urdu",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "2",
+    "name": "Qurat Kamili, MD",
+    "specialty": "Allergy & Immunology",
+    "city": "Frisco / Garland",
+    "phone": "972-272-4463",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "3",
+    "name": "Aqeel Kamal",
+    "specialty": "Anesthesiology",
+    "city": "Dallas",
+    "phone": "972-715-5000",
+    "languages": [
+      "English",
+      "Gujrati",
+      "Swahili",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "4",
+    "name": "Tasneem Agha, MD",
+    "specialty": "Anesthesiology",
+    "city": "Lewisville",
+    "phone": "940-483-9888",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "5",
+    "name": "Ahmad Elsharydah",
+    "specialty": "Anesthesiology & Pain Management",
+    "city": "Dallas",
+    "phone": "(214) 645-8300",
+    "languages": [
+      "Arabic"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "6",
+    "name": "Ameena Hussain, MD, MPH",
+    "specialty": "Cardiology",
+    "city": "Plano / McKinney",
+    "phone": "469-800-4540",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "7",
+    "name": "Anand Rohatgi, MD",
+    "specialty": "Cardiology",
+    "city": "Dallas / Coppell",
+    "phone": "214-645-8000",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "8",
+    "name": "Ashesh Parikh, DO",
+    "specialty": "Cardiology",
+    "city": "Plano",
+    "phone": "972-981-7870",
+    "languages": [
+      "English",
+      "Hindi",
+      "Gujrati",
+      "Urdu"
+    ],
+    "affiliation": "Texas Health Resources"
+  },
+  {
+    "id": "9",
+    "name": "Bhupinder Singh, MD",
+    "specialty": "Cardiology",
+    "city": "Plano / McKinney",
+    "phone": "972-612-0388",
+    "languages": [
+      "Hindi",
+      "Urdu",
+      "Punjabi"
+    ],
+    "affiliation": "Texas Health Resources"
+  },
+  {
+    "id": "10",
+    "name": "Dr. Fayal Kamili",
+    "specialty": "Cardiology",
+    "city": "Frisco",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "11",
+    "name": "Farhana Kazi, MD",
+    "specialty": "Cardiology",
+    "city": "Dallas",
+    "phone": "469-293-2067",
+    "languages": [
+      "English",
+      "Spanish",
+      "Urdu",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "12",
+    "name": "Hafiza H. Khan, MD, FACC, FHRS",
+    "specialty": "Cardiology",
+    "city": "Plano",
+    "phone": "469-800-4540",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "13",
+    "name": "Hesham Sadek",
+    "specialty": "Cardiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "14",
+    "name": "Maria Viqar, MD",
+    "specialty": "Cardiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "15",
+    "name": "Neelima Paladugu, MD",
+    "specialty": "Cardiology",
+    "city": "McKinney",
+    "phone": "817-695-0050",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "16",
+    "name": "Poonam G. Agarwal, MD",
+    "specialty": "Cardiology",
+    "city": "Plano",
+    "phone": "972-596-9200",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "17",
+    "name": "Saima Zafar, MD",
+    "specialty": "Cardiology",
+    "city": "Plano / McKinney",
+    "phone": "(972) 962-2000",
+    "languages": [
+      "English",
+      "Urdu",
+      "Punjabi",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "18",
+    "name": "Samreen Raza, MD",
+    "specialty": "Cardiology",
+    "city": "Plano",
+    "phone": "972-941-3100",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "19",
+    "name": "Shuaib Abdullah",
+    "specialty": "Cardiology",
+    "city": "Dallas",
+    "phone": "(214) 645-7521",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "20",
+    "name": "Venkatesan Vidi, MD",
+    "specialty": "Cardiology",
+    "city": "Bedford",
+    "phone": "817-510-1060",
+    "languages": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "21",
+    "name": "Mirna Masri, DC",
+    "specialty": "Chiropractic",
+    "city": "Plano",
+    "phone": "817-472-7700",
+    "languages": [
+      "Arabic"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "22",
+    "name": "Amer Suleman, MD",
+    "specialty": "Clinical Cardiac Electrophysiology",
+    "city": "McKinney / Dallas",
+    "phone": "214-504-9942",
+    "languages": [
+      "English",
+      "Urdu",
+      "Arabic"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "23",
+    "name": "Amena Jameeluddin, DDS",
+    "specialty": "Dentistry",
+    "city": "Dallas",
+    "phone": "(214) 380-5054",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "24",
+    "name": "Bindu Kovvuri, DMD",
+    "specialty": "Dentistry",
+    "city": "McKinney",
+    "phone": "469-908-2020",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "25",
+    "name": "Deep Patel, DMD",
+    "specialty": "Dentistry",
+    "city": "Grapevine / Irving / Keller / Flower Mound",
+    "phone": "972-401-8301",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "26",
+    "name": "Deepa Kastoori, DDS",
+    "specialty": "Dentistry",
+    "city": "Dallas",
+    "phone": "(469) 904-2080",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "27",
+    "name": "Dr. Amal Siefelnasr, DDS",
+    "specialty": "Dentistry",
+    "city": "Lewisville",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "28",
+    "name": "Dr. Marwa Jassim, DDS",
+    "specialty": "Dentistry",
+    "city": "",
+    "phone": "817-419-9009",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "29",
+    "name": "Faizan Ali, DDS",
+    "specialty": "Dentistry",
+    "city": "Frisco",
+    "phone": "469-850-0786",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "30",
+    "name": "Hodan Rabile, DDS",
+    "specialty": "Dentistry",
+    "city": "Irving",
+    "phone": "972-756-9557",
+    "languages": [
+      "French",
+      "Somali",
+      "Arabic"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "31",
+    "name": "Humaira Azeem, DDS",
+    "specialty": "Dentistry",
+    "city": "Garland / Dallas",
+    "phone": "972-303-3600",
+    "languages": [
+      "Hindi",
+      "Punjabi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "32",
+    "name": "Kirat Sodhi, BDS, MSD",
+    "specialty": "Dentistry",
+    "city": "Irving / Dallas",
+    "phone": "972-546-3634",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "33",
+    "name": "Maheen Ahmad, DDS",
+    "specialty": "Dentistry",
+    "city": "Arlington",
+    "phone": "817-468-8839",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "34",
+    "name": "Maria Saber, DDS",
+    "specialty": "Dentistry",
+    "city": "Carrollton",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "35",
+    "name": "Mariam Ahmad, DDS",
+    "specialty": "Dentistry",
+    "city": "Sunnyvale",
+    "phone": "972-329-5437",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "36",
+    "name": "Mayada Al-Tamimi, DDS",
+    "specialty": "Dentistry",
+    "city": "Carrollton",
+    "phone": "(972) 459-1100",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "37",
+    "name": "Moniza Munawar, DDS",
+    "specialty": "Dentistry",
+    "city": "Dallas",
+    "phone": "214-948-3364",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "38",
+    "name": "Naren Mikkilineni, DDS",
+    "specialty": "Dentistry",
+    "city": "Irving / Plano / DeSoto",
+    "phone": "214-307-4715",
+    "languages": [
+      "English",
+      "Hindi",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "39",
+    "name": "Nawal Shah, DDS",
+    "specialty": "Dentistry",
+    "city": "Dallas",
+    "phone": "(214) 782-9338",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "40",
+    "name": "Parth Khatsuria, DDS",
+    "specialty": "Dentistry",
+    "city": "Irving",
+    "phone": "972-532-7502",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "41",
+    "name": "Parva Patel, DDS",
+    "specialty": "Dentistry",
+    "city": "Fort Worth",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "42",
+    "name": "Sadaf Syed, DDS",
+    "specialty": "Dentistry",
+    "city": "Dallas",
+    "phone": "(972) 702-9017",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "43",
+    "name": "Shafinaz Ali, DDS",
+    "specialty": "Dentistry",
+    "city": "Allen",
+    "phone": "469-838-3400",
+    "languages": [
+      "English",
+      "Hindi",
+      "Gujrati",
+      "Telegu",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "44",
+    "name": "Shaiesta Osman, DDS",
+    "specialty": "Dentistry",
+    "city": "Richardson",
+    "phone": "972-664-9696",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "45",
+    "name": "Shalini Thasma, DDS",
+    "specialty": "Dentistry",
+    "city": "Frisco",
+    "phone": "214-387-8400",
+    "languages": [
+      "English",
+      "Tamil"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "46",
+    "name": "Shalu Palhan, DDS",
+    "specialty": "Dentistry",
+    "city": "Irving",
+    "phone": "214-417-8301",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "47",
+    "name": "Vijaya Kallam, DDS",
+    "specialty": "Dentistry",
+    "city": "Frisco",
+    "phone": "(214) 872-2700",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "48",
+    "name": "Saira Momin, DO",
+    "specialty": "Dermatology",
+    "city": "Dallas",
+    "phone": "817-410-7700",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "49",
+    "name": "Ahamed Idris, MD",
+    "specialty": "Emergency Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "50",
+    "name": "Asra Khan, MD",
+    "specialty": "Endocrinology",
+    "city": "Rockwall",
+    "phone": "(832) 824-3278",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "51",
+    "name": "Ayesha Ebrahim, MD",
+    "specialty": "Endocrinology",
+    "city": "Grapevine",
+    "phone": "817-722-6078",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "52",
+    "name": "Iram Hussain",
+    "specialty": "Endocrinology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "53",
+    "name": "Sadia Ali, MD",
+    "specialty": "Endocrinology",
+    "city": "Dallas",
+    "phone": "214-645-6397",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "54",
+    "name": "Seema Haq, MD",
+    "specialty": "Endocrinology",
+    "city": "Denton",
+    "phone": "(940) 488-4767",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "55",
+    "name": "Sesha S. Uppalapati, MD",
+    "specialty": "Endocrinology",
+    "city": "Fort Worth / Keller",
+    "phone": "817-310-8881",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "56",
+    "name": "Sumana Gangi, MD",
+    "specialty": "Endocrinology",
+    "city": "Mesquite / Plano",
+    "phone": "972-682-5700",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "57",
+    "name": "Zahid Ahmad, MD",
+    "specialty": "Endocrinology",
+    "city": "Dallas",
+    "phone": "(214) 648-2377",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "58",
+    "name": "Zehra Tekin, MD",
+    "specialty": "Endocrinology",
+    "city": "Dallas",
+    "phone": "(214) 645-2800",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "59",
+    "name": "Adila Siddiqui, DO",
+    "specialty": "Family Medicine",
+    "city": "Grand Prairie",
+    "phone": "972-647-0550",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "60",
+    "name": "Arjumand Ghayas, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "214-266-3000",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "61",
+    "name": "Ayesha Khan, DO",
+    "specialty": "Family Medicine",
+    "city": "Saginaw",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "62",
+    "name": "Farhat Sheikh, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "63",
+    "name": "Haresh Boghara, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "214-391-1158",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Methodist"
+  },
+  {
+    "id": "64",
+    "name": "Husna Iqbal, MD",
+    "specialty": "Family Medicine",
+    "city": "DeSoto",
+    "phone": "972-572-8150",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Methodist"
+  },
+  {
+    "id": "65",
+    "name": "Marium Afzal",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "66",
+    "name": "Mehreen Malik, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "67",
+    "name": "Nafees Saifee, MD",
+    "specialty": "Family Medicine",
+    "city": "Fort Worth",
+    "phone": "817-336-2481",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "68",
+    "name": "Nida Zahra",
+    "specialty": "Family Medicine",
+    "city": "Dallas / Richardson",
+    "phone": "214-645-3900",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "69",
+    "name": "Palaniappan Arumugham, MD",
+    "specialty": "Family Medicine",
+    "city": "Richardson",
+    "phone": "972-669-1454",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "70",
+    "name": "Palwasha Khan, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "214-265-2810",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "71",
+    "name": "Rommana Aziz, DO",
+    "specialty": "Family Medicine",
+    "city": "Plano",
+    "phone": "972-466-3400",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Medical City Healthcare"
+  },
+  {
+    "id": "72",
+    "name": "Saba Shabnam, MD",
+    "specialty": "Family Medicine",
+    "city": "Euless",
+    "phone": "817-510-9645",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "73",
+    "name": "Sarah Uddin",
+    "specialty": "Family Medicine",
+    "city": "Frisco",
+    "phone": "469-604-9200",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "74",
+    "name": "Seema Ghaffar, MD",
+    "specialty": "Family Medicine",
+    "city": "Southlake",
+    "phone": "817-749-0155",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "75",
+    "name": "Shahan Chowdhury, MD",
+    "specialty": "Family Medicine",
+    "city": "Frisco",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "76",
+    "name": "Shahida Rafeeq, MD",
+    "specialty": "Family Medicine",
+    "city": "Richardson",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "77",
+    "name": "Shahida Rafiq, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "469-850-5760",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "78",
+    "name": "Shalin Parikh, MD",
+    "specialty": "Family Medicine",
+    "city": "Irving",
+    "phone": "469-262-5762",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "79",
+    "name": "Shazia Khan, MD",
+    "specialty": "Family Medicine",
+    "city": "Plano",
+    "phone": "972-981-3225",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "80",
+    "name": "Shehla Naz, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "(214) 828-0448",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "81",
+    "name": "Sreeram Gonnalagadda, MD",
+    "specialty": "Family Medicine",
+    "city": "Frisco",
+    "phone": "469-850-1432",
+    "languages": [
+      "English",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "82",
+    "name": "Subuhi Naghmi, MD",
+    "specialty": "Family Medicine",
+    "city": "Garland",
+    "phone": "972-276-1779",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "83",
+    "name": "Sunitha Malla, MD",
+    "specialty": "Family Medicine",
+    "city": "Coppell",
+    "phone": "972-382-5761",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "84",
+    "name": "Tehmina Tasneem, MD",
+    "specialty": "Family Medicine",
+    "city": "North Richland Hills",
+    "phone": "817-274-2578",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "85",
+    "name": "Zafreen Siddiqui, MD",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "(214) 266-1600",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "86",
+    "name": "Zubair Syed",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "214-891-6400",
+    "languages": [
+      "English",
+      "Urdu",
+      "Kashmiri"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "87",
+    "name": "Humza Siddiqi",
+    "specialty": "Family Medicine / Geriatric Medicine",
+    "city": "Dallas",
+    "phone": "214-891-6400",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "88",
+    "name": "Dorette Noorhasan, MD",
+    "specialty": "Fertility & Reproductive Medicine",
+    "city": "Frisco",
+    "phone": "(972) 377-2625",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "89",
+    "name": "Yetunde Ibrahim, MD",
+    "specialty": "Fertility & Reproductive Medicine",
+    "city": "Frisco",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "90",
+    "name": "Jayaprakash Sreenarasimhaiah, MD",
+    "specialty": "Gastroenterology",
+    "city": "Irving",
+    "phone": "(214) 807-0271",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "91",
+    "name": "Mahreeme Jawairia, MD",
+    "specialty": "Gastroenterology",
+    "city": "Lehighton",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "92",
+    "name": "Priya Rangasamy, MD",
+    "specialty": "Gastroenterology",
+    "city": "Fort Worth",
+    "phone": "(817) 877-0888",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Digestive Health Associates of Texas"
+  },
+  {
+    "id": "93",
+    "name": "Ravi Chittajallu, MD",
+    "specialty": "Gastroenterology",
+    "city": "McKinney",
+    "phone": "972-562-8383",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": "Digestive Health Associates of Texas"
+  },
+  {
+    "id": "94",
+    "name": "Ranjeeta Bahirwani, MD",
+    "specialty": "Gastroenterology / Hepatology",
+    "city": "Dallas",
+    "phone": "(214) 820-8500",
+    "languages": [
+      "English",
+      "French",
+      "Hindi",
+      "Sindhi"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "95",
+    "name": "Paresh Rajajoshiwala, MD",
+    "specialty": "General Surgery",
+    "city": "Keller",
+    "phone": "682-224-3748",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "96",
+    "name": "Sheetal Patel, MD",
+    "specialty": "General Surgery / Bariatric Surgery",
+    "city": "Plano",
+    "phone": "972-596-5225",
+    "languages": [
+      "English",
+      "Gujrati",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "97",
+    "name": "Zohra Shad, MD, FACMG",
+    "specialty": "Genetics",
+    "city": "Fort Worth / Carrollton",
+    "phone": "972-757-0345",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "98",
+    "name": "Ihab Hajjar",
+    "specialty": "Geriatric Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "99",
+    "name": "Kuldeep Singh, MD",
+    "specialty": "Geriatric Medicine",
+    "city": "Plano",
+    "phone": "972-943-1916",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "100",
+    "name": "Namirah Jamshed, MD",
+    "specialty": "Geriatric Medicine",
+    "city": "Dallas",
+    "phone": "(214) 645-8650",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "101",
+    "name": "Sawsan Rashdan, MD",
+    "specialty": "Hematology / Oncology",
+    "city": "Dallas",
+    "phone": "(214) 645-4673",
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "102",
+    "name": "Yazan Madanat",
+    "specialty": "Hematology / Oncology",
+    "city": "Dallas",
+    "phone": "214-645-4673",
+    "languages": [
+      "English",
+      "Arabic",
+      "French"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "103",
+    "name": "Athar Haq MD",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "214-645-3597",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "104",
+    "name": "Farihah Perwez MD",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "214-648-9741",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "105",
+    "name": "Huma Muzaffar, MD",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "214-947-5950",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "106",
+    "name": "Mahmuda Islam",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "107",
+    "name": "Naseem Khan, MD",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "108",
+    "name": "Sana Khaliq MD",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "109",
+    "name": "Subhasri Kannan, MD",
+    "specialty": "Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Parkland Health"
+  },
+  {
+    "id": "110",
+    "name": "Chaitanya Tummala, MD",
+    "specialty": "Infectious Disease",
+    "city": "Frisco",
+    "phone": "214-396-8877",
+    "languages": [
+      "English",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "111",
+    "name": "Gayathri Krishnan, MD",
+    "specialty": "Infectious Disease",
+    "city": "Dallas",
+    "phone": "214-645-6427",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "112",
+    "name": "Mahesh Kottapalli, MD",
+    "specialty": "Infectious Disease",
+    "city": "DeSoto",
+    "phone": "972-283-2370",
+    "languages": [
+      "English",
+      "Hindi",
+      "Spanish"
+    ],
+    "affiliation": "Methodist"
+  },
+  {
+    "id": "113",
+    "name": "Nikhil Bhayani, MD",
+    "specialty": "Infectious Disease",
+    "city": "Bedford",
+    "phone": "817-916-8877",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "114",
+    "name": "Sofia Ansari, MD",
+    "specialty": "Infectious Disease",
+    "city": "Plano",
+    "phone": "(972) 867-9131",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "115",
+    "name": "Zartash Khan, MD",
+    "specialty": "Infectious Disease",
+    "city": "Plano",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "116",
+    "name": "Aasia Janjua, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "817-870-3627",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "117",
+    "name": "Ambareen Salam, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "972-566-8899",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "118",
+    "name": "Amna Iftikhar, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "214-544-3355",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "119",
+    "name": "Dr. Asma Shah",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "800-443-9672",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "120",
+    "name": "Dr. Uzma Hannan",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "214-590-8000",
+    "languages": [
+      "Arabic"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "121",
+    "name": "Farah Shah, MD",
+    "specialty": "Internal Medicine",
+    "city": "Denton",
+    "phone": "940-380-8100",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "122",
+    "name": "Farhana Amir, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "(817) 735-3627",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "123",
+    "name": "Farida Valliani, MD",
+    "specialty": "Internal Medicine",
+    "city": "Carrollton",
+    "phone": "214-731-0031",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "124",
+    "name": "Fauzia Osama, MD",
+    "specialty": "Internal Medicine",
+    "city": "Wylie",
+    "phone": "972-429-1077",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "125",
+    "name": "Hitesh Yagnik, MD",
+    "specialty": "Internal Medicine",
+    "city": "Plano",
+    "phone": "972-403-1122",
+    "languages": [
+      "English",
+      "Gujrati",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "126",
+    "name": "Hythem Omar, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "127",
+    "name": "Iram Hamdard, MD",
+    "specialty": "Internal Medicine",
+    "city": "Grapevine",
+    "phone": "(817) 416-1931",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "128",
+    "name": "Lata Pablani, MD",
+    "specialty": "Internal Medicine",
+    "city": "Frisco",
+    "phone": "469-888-4890",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "129",
+    "name": "Latha Yedlapalli, MD",
+    "specialty": "Internal Medicine",
+    "city": "Frisco",
+    "phone": "214-436-4949",
+    "languages": [
+      "English",
+      "Hindi",
+      "Kanada",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "130",
+    "name": "Maryam Reza, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "131",
+    "name": "Munazza Sethi, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "817-336-6000",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "132",
+    "name": "Nelofer Azad, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "972-490-6556",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "133",
+    "name": "Nuzhat Ahmed, MD",
+    "specialty": "Internal Medicine",
+    "city": "Frisco",
+    "phone": "214-383-0001",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu",
+      "Punjabi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "134",
+    "name": "Rabia Sadiq, MD",
+    "specialty": "Internal Medicine",
+    "city": "Benbrook",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "135",
+    "name": "Rani Anbarasu, MD",
+    "specialty": "Internal Medicine",
+    "city": "Frisco / Denton",
+    "phone": "469-301-2300",
+    "languages": [
+      "English",
+      "Tamil"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "136",
+    "name": "Ravi Siripurapu, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "972-544-6600",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "137",
+    "name": "Saadia Farooq, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "214-696-8033",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "138",
+    "name": "Sabina Amin, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "139",
+    "name": "Sajjida Naim, MD",
+    "specialty": "Internal Medicine",
+    "city": "Colleyville",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "140",
+    "name": "Salma Saige, MD",
+    "specialty": "Internal Medicine",
+    "city": "Mesquite",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "141",
+    "name": "Sanober Amin, MD",
+    "specialty": "Internal Medicine",
+    "city": "McKinney",
+    "phone": "(214) 337-6362",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "142",
+    "name": "Shabnam Qasim, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "817-626-9744",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "143",
+    "name": "Shehetaj Abdurrahim, MD",
+    "specialty": "Internal Medicine",
+    "city": "",
+    "phone": "972-283-5998",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "144",
+    "name": "Sophia Rahman, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "972-782-2811",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu",
+      "ASL"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "145",
+    "name": "Sumbul Islam, MD",
+    "specialty": "Internal Medicine",
+    "city": "Sherman",
+    "phone": "903-957-0417",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "146",
+    "name": "Suresh Kankanala, MD",
+    "specialty": "Internal Medicine",
+    "city": "Fort Worth",
+    "phone": "972-544-6600",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "147",
+    "name": "Vijay Katari, MD",
+    "specialty": "Internal Medicine",
+    "city": "Frisco",
+    "phone": "214-884-2774",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "148",
+    "name": "Vijaya Mummadi, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "469-646-8880",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "149",
+    "name": "Nagendra Gupta, MD",
+    "specialty": "Internal Medicine / Hospital Medicine",
+    "city": "Arlington",
+    "phone": "817-767-6155",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "150",
+    "name": "Kiran Kumar R. Mangalpally, MD",
+    "specialty": "Interventional Cardiology",
+    "city": "Frisco",
+    "phone": "945-222-4111",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "151",
+    "name": "Nikhil Nalluri, MD",
+    "specialty": "Interventional Cardiology",
+    "city": "DeSoto",
+    "phone": "972-572-1600",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": "Methodist"
+  },
+  {
+    "id": "152",
+    "name": "Ram Aligeti, MD",
+    "specialty": "Interventional Cardiology",
+    "city": "Plano",
+    "phone": "469-409-2601",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "153",
+    "name": "Sainath Gaddam, MD",
+    "specialty": "Interventional Cardiology",
+    "city": "Frisco",
+    "phone": "469-888-4890",
+    "languages": [
+      "English",
+      "Hindi",
+      "Spanish",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "154",
+    "name": "Leen Al Hafez",
+    "specialty": "Maternal-Fetal Medicine",
+    "city": "Plano / Dallas",
+    "phone": "469-497-2980",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "155",
+    "name": "Asya Asghar, MD",
+    "specialty": "Neonatal-Perinatal Medicine",
+    "city": "Dallas",
+    "phone": "214-648-3903",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "156",
+    "name": "Anitha Byreddy, MD",
+    "specialty": "Nephrology",
+    "city": "Grand Prairie",
+    "phone": "972-589-7538",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "157",
+    "name": "Anupkumar Shetty, MD",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "214-358-2300",
+    "languages": [
+      "English",
+      "Hindi",
+      "Kanada"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "158",
+    "name": "Asma Hasan, MD",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "159",
+    "name": "Bekir Tanriover, MD, MPH",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "(214) 645-1919",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "160",
+    "name": "Dr. Fareha Kazi",
+    "specialty": "Nephrology",
+    "city": "Frisco",
+    "phone": "214-842-8743",
+    "languages": [
+      "English",
+      "Hindi",
+      "Spanish",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "161",
+    "name": "Hanan Fahmy, MD, FASN",
+    "specialty": "Nephrology",
+    "city": "Irving",
+    "phone": "214-716-7573",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "162",
+    "name": "Huda Arif, MD",
+    "specialty": "Nephrology",
+    "city": "Arlington",
+    "phone": "817-250-4906",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "163",
+    "name": "Kiran Khan",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "164",
+    "name": "Laila Lakhani",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "165",
+    "name": "Ramesh Saxena, MD, PhD",
+    "specialty": "Nephrology",
+    "city": "Dallas / Irving",
+    "phone": "214-645-1919",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "166",
+    "name": "Samina Fazal, MD",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "214-358-2300",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "167",
+    "name": "Shani Shastri, MD",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "214-645-1919",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "168",
+    "name": "Shehpar Khan, MD",
+    "specialty": "Nephrology",
+    "city": "Mesquite",
+    "phone": "972-889-9871",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "169",
+    "name": "Amyn Habib",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "170",
+    "name": "Ghazala Perven, MD",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "(214) 645-0624",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "171",
+    "name": "Jaya Trivedi, MD",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "214-645-8800",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "172",
+    "name": "Muna Khan, MD",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "173",
+    "name": "Nawal Shaikh",
+    "specialty": "Neurology",
+    "city": "Fort Worth / Dallas",
+    "phone": "817-702-8400",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "174",
+    "name": "Rabia Khan, MD",
+    "specialty": "Neurology",
+    "city": "Irving",
+    "phone": "(972) 517-2171",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "175",
+    "name": "Rasheda El-Nazer, MD",
+    "specialty": "Neurology",
+    "city": "Richardson",
+    "phone": "469-842-7392",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "176",
+    "name": "Salman Bhai",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "177",
+    "name": "Shaida Khan",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Farsi/Persian"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "178",
+    "name": "Supriya Thirunarayanan, MD",
+    "specialty": "Neurology",
+    "city": "Plano",
+    "phone": "469-977-1010",
+    "languages": [
+      "English",
+      "Tamil",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "179",
+    "name": "Tejas Karnati, MD",
+    "specialty": "Neurosurgery",
+    "city": "Dallas",
+    "phone": "469-800-9260",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "180",
+    "name": "Orhan Oz, MD, PhD",
+    "specialty": "Nuclear Medicine / Radiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Parkland Health"
+  },
+  {
+    "id": "181",
+    "name": "Mahbuba E. Chowdhury",
+    "specialty": "Nutrition",
+    "city": "Plano",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "182",
+    "name": "Deana Jibril, DO",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Plano",
+    "phone": "972-867-4880",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "183",
+    "name": "Julia Chowdhury, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Plano",
+    "phone": "(972) 985-0400",
+    "languages": [
+      "English",
+      "Urdu",
+      "Hindi",
+      "Spanish",
+      "Bengali"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "184",
+    "name": "Ingy Khattaby, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Dallas",
+    "phone": "(972) 944-8200",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "185",
+    "name": "Naseem Jagani, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "186",
+    "name": "Nasiha Ahmad, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Denton",
+    "phone": "(940) 566-1200",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "187",
+    "name": "Noushin Firouzbakht, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Fort Worth",
+    "phone": "817-878-2667",
+    "languages": [
+      "English",
+      "Spanish",
+      "Farsi/Persian"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "188",
+    "name": "Tehmina Hussain, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Euless",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "189",
+    "name": "Yasmin Khan, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Richardson",
+    "phone": "972-498-4510",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "190",
+    "name": "Zarmina Aman, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Plano",
+    "phone": "972-473-0973",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "191",
+    "name": "Shahdan Mansoor, MD",
+    "specialty": "Oncology",
+    "city": "Burleson",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "192",
+    "name": "Aaleya Koreishi, MD",
+    "specialty": "Ophthalmology",
+    "city": "Arlington",
+    "phone": "(817) 987-1248",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "193",
+    "name": "Hemang Pandya, MD",
+    "specialty": "Ophthalmology",
+    "city": "Plano",
+    "phone": "469-430-8375",
+    "languages": [
+      "English",
+      "Gujrati",
+      "Hindi",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "194",
+    "name": "Hena Aiesha Khaja, MD",
+    "specialty": "Ophthalmology",
+    "city": "Dallas",
+    "phone": "469-373-2727",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "195",
+    "name": "Kamel Itani, MD",
+    "specialty": "Ophthalmology",
+    "city": "Dallas",
+    "phone": "(214) 645-2020",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "196",
+    "name": "Karanjit Kooner, MD, PhD, MBA",
+    "specialty": "Ophthalmology",
+    "city": "Dallas",
+    "phone": "214-645-2020",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "197",
+    "name": "Om Patel, MD",
+    "specialty": "Orthopedics",
+    "city": "Coppell / Frisco",
+    "phone": "469-850-0680",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "198",
+    "name": "Zainab Farzal, MD, MPH",
+    "specialty": "Otolaryngology / Head & Neck Surgery",
+    "city": "Dallas",
+    "phone": "(214) 645-8898",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "199",
+    "name": "Amit Darnule, MD",
+    "specialty": "Pain Medicine",
+    "city": "Southlake / DFW",
+    "phone": "817-442-9300",
+    "languages": [
+      "English",
+      "Marathi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "200",
+    "name": "Imrana Khalid, MD",
+    "specialty": "Pathology",
+    "city": "Dallas",
+    "phone": "214-638-2000",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "201",
+    "name": "Naseem Uddin",
+    "specialty": "Pathology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "202",
+    "name": "Raheela Ashfaq, MD",
+    "specialty": "Pathology",
+    "city": "Dallas",
+    "phone": "214-277-8700",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "203",
+    "name": "Mohammad Hussain, MD",
+    "specialty": "Pediatric Cardiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "204",
+    "name": "Sadia Malik",
+    "specialty": "Pediatric Cardiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "205",
+    "name": "Abha Choudhary",
+    "specialty": "Pediatric Endocrinology",
+    "city": "Dallas / Plano",
+    "phone": "214-456-5959",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "206",
+    "name": "Aakash Goyal, MD",
+    "specialty": "Pediatric Gastroenterology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "207",
+    "name": "Rinarani Sanghavi, MD, MBA",
+    "specialty": "Pediatric Gastroenterology",
+    "city": "Dallas",
+    "phone": "(214) 456-8000",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "208",
+    "name": "Sadaf Saghier, MD",
+    "specialty": "Pediatric Gastroenterology",
+    "city": "Mansfield / North Richland Hills",
+    "phone": "(469) 733-1033",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "Digestive Health Associates of Texas"
+  },
+  {
+    "id": "209",
+    "name": "Sindhu Pandurangi, MD",
+    "specialty": "Pediatric Gastroenterology / Hepatology",
+    "city": "Dallas",
+    "phone": "(214) 648-2145",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "210",
+    "name": "Anum Dadwani, MD",
+    "specialty": "Pediatric Hospital Medicine",
+    "city": "Dallas",
+    "phone": "214-648-3111",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "211",
+    "name": "Lubna Hussain, MD",
+    "specialty": "Pediatric Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Spanish",
+      "Urdu",
+      "Arabic"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "212",
+    "name": "Jyothsna Gattineni, MD",
+    "specialty": "Pediatric Nephrology",
+    "city": "Dallas",
+    "phone": "214-730-5437",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "213",
+    "name": "Kazi Majeed",
+    "specialty": "Pediatric Neurology",
+    "city": "Dallas",
+    "phone": "214-456-7000",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "214",
+    "name": "Roha Khalid",
+    "specialty": "Pediatric Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "215",
+    "name": "Saima Kayani, MD",
+    "specialty": "Pediatric Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "216",
+    "name": "Esra Caylan, MD",
+    "specialty": "Pediatric Pulmonology",
+    "city": "Dallas",
+    "phone": "(682) 885-1621",
+    "languages": [
+      "English",
+      "Turkish"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "217",
+    "name": "Faisal Qureshi",
+    "specialty": "Pediatric Surgery",
+    "city": "Dallas",
+    "phone": "214-456-6040",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "218",
+    "name": "Aasma Khandekar, MD",
+    "specialty": "Pediatrics",
+    "city": "Dallas",
+    "phone": "972-788-1858",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "219",
+    "name": "Afser Tasneem, MD",
+    "specialty": "Pediatrics",
+    "city": "Lewisville",
+    "phone": "469-293-8561",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "220",
+    "name": "Aneesa Ahmed, MD",
+    "specialty": "Pediatrics",
+    "city": "Richardson",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "221",
+    "name": "Azra Jagani, MD",
+    "specialty": "Pediatrics",
+    "city": "Frisco",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "222",
+    "name": "Farah Naz, MD",
+    "specialty": "Pediatrics",
+    "city": "Carrollton",
+    "phone": "(972) 395-8600",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "223",
+    "name": "Faryal Ghaffar, MD",
+    "specialty": "Pediatrics",
+    "city": "Grapevine",
+    "phone": "817-416-5554",
+    "languages": [
+      "English",
+      "Urdu",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "224",
+    "name": "Fauzia Naqvi, MD",
+    "specialty": "Pediatrics",
+    "city": "Garland",
+    "phone": "214-266-0700",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "225",
+    "name": "Hasina Hussain, MD",
+    "specialty": "Pediatrics",
+    "city": "Allen",
+    "phone": "214-509-3623",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "226",
+    "name": "Khanum Saleha, MD",
+    "specialty": "Pediatrics",
+    "city": "Frisco",
+    "phone": "972-200-7862",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "227",
+    "name": "Lata Shridharan, MD",
+    "specialty": "Pediatrics",
+    "city": "Frisco / Plano",
+    "phone": "972-618-3547",
+    "languages": [
+      "English",
+      "Hindi",
+      "Tamil",
+      "Urdu",
+      "Marathi",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "228",
+    "name": "Mariam Saleem, MD",
+    "specialty": "Pediatrics",
+    "city": "Arlington",
+    "phone": "817-275-8131",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "229",
+    "name": "Maryam Ali, MD",
+    "specialty": "Pediatrics",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "230",
+    "name": "Naureen Ameen, MD",
+    "specialty": "Pediatrics",
+    "city": "Mansfield",
+    "phone": "682-341-3910",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "231",
+    "name": "Naveen Haq, MD",
+    "specialty": "Pediatrics",
+    "city": "Allen",
+    "phone": "972-649-5480",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "232",
+    "name": "Nazneen Talukder, MD",
+    "specialty": "Pediatrics",
+    "city": "Allen",
+    "phone": "972-359-0000",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "233",
+    "name": "Noorjahan Ali, MD",
+    "specialty": "Pediatrics",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "234",
+    "name": "Nusrat Alamgir, MD",
+    "specialty": "Pediatrics",
+    "city": "Dallas",
+    "phone": "214-266-1600",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "235",
+    "name": "Phani Bodavula, MD",
+    "specialty": "Pediatrics",
+    "city": "Garland",
+    "phone": "972-216-8500",
+    "languages": [
+      "English",
+      "Hindi",
+      "Kanada",
+      "Spanish",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "236",
+    "name": "Qamar Aslam, MD",
+    "specialty": "Pediatrics",
+    "city": "Carrollton",
+    "phone": "(214) 483-3292",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "237",
+    "name": "Raheela Hafeez, MD",
+    "specialty": "Pediatrics",
+    "city": "Fort Worth",
+    "phone": "817-735-2363",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "238",
+    "name": "Rani Siddiqi, MD",
+    "specialty": "Pediatrics",
+    "city": "Dallas",
+    "phone": "214-369-7661",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "239",
+    "name": "Salehe Khanum, MD",
+    "specialty": "Pediatrics",
+    "city": "Frisco",
+    "phone": "972-200-7862",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "240",
+    "name": "Sana Kayani, MD",
+    "specialty": "Pediatrics",
+    "city": "Bedford",
+    "phone": "817-571-6644",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "241",
+    "name": "Shams Kirimi, MD",
+    "specialty": "Pediatrics",
+    "city": "",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "242",
+    "name": "Shehla Shah, MD",
+    "specialty": "Pediatrics",
+    "city": "Arlington",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "243",
+    "name": "Syed Ahmed, MD",
+    "specialty": "Pediatrics",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "244",
+    "name": "Vida Amin, MD",
+    "specialty": "Pediatrics",
+    "city": "Fort Worth",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "245",
+    "name": "Zahida Iqbal, MD",
+    "specialty": "Pediatrics",
+    "city": "Mesquite",
+    "phone": "972-216-1063",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "246",
+    "name": "Nabeeha Ahmad, MD",
+    "specialty": "Pediatrics / Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Children's Health, Parkland Health"
+  },
+  {
+    "id": "247",
+    "name": "Bagyalakshmi Arumugham, MD",
+    "specialty": "Psychiatry",
+    "city": "Richardson",
+    "phone": "469-713-9701",
+    "languages": [
+      "English",
+      "Tamil"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "248",
+    "name": "Emine Ayvaci, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Spanish",
+      "Turkish"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "249",
+    "name": "Farah Ali, MD",
+    "specialty": "Psychiatry",
+    "city": "Frisco",
+    "phone": "469-213-6400",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu",
+      "Punjabi",
+      "Sindhi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "250",
+    "name": "Farida Yusuf, MD",
+    "specialty": "Psychiatry",
+    "city": "Fort Worth",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "251",
+    "name": "Fazila Siddiqi, MD",
+    "specialty": "Psychiatry",
+    "city": "McKinney",
+    "phone": "214-491-1618",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "252",
+    "name": "Ghazala Ahmed, MD",
+    "specialty": "Psychiatry",
+    "city": "Frisco",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "253",
+    "name": "Humera Chowdhary, MD",
+    "specialty": "Psychiatry",
+    "city": "Frisco",
+    "phone": "972-668-3109",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Medical City Healthcare"
+  },
+  {
+    "id": "254",
+    "name": "Kanthi Raju, DO",
+    "specialty": "Psychiatry",
+    "city": "Richardson",
+    "phone": "972-907-5230",
+    "languages": [
+      "English",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "255",
+    "name": "Kiran F. Siddiqui, MD",
+    "specialty": "Psychiatry",
+    "city": "Flower Mound",
+    "phone": "817-240-0012",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "256",
+    "name": "Lubna Siddiki, MD",
+    "specialty": "Psychiatry",
+    "city": "Plano",
+    "phone": "917-336-8422",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "257",
+    "name": "Manu Mathews, MD",
+    "specialty": "Psychiatry",
+    "city": "Fort Worth / Southlake",
+    "phone": "817-381-9650",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "Invicta Healthcare"
+  },
+  {
+    "id": "258",
+    "name": "Mehmooda Nasir, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "214-351-3490",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "259",
+    "name": "Mehvish Afrina, MD",
+    "specialty": "Psychiatry",
+    "city": "Plano",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "260",
+    "name": "Mohsin Khan, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern, Children's Health"
+  },
+  {
+    "id": "261",
+    "name": "Nishendu Vasavada, MD",
+    "specialty": "Psychiatry",
+    "city": "Carrollton",
+    "phone": "972-221-1741",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "262",
+    "name": "Pradeep Kumar, MD",
+    "specialty": "Psychiatry",
+    "city": "Plano / McKinney",
+    "phone": "972-849-9597",
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "263",
+    "name": "Raju Indukuri, MD",
+    "specialty": "Psychiatry",
+    "city": "Hurst",
+    "phone": "817-222-9907",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "264",
+    "name": "Rubina Shakil, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": "Parkland Health"
+  },
+  {
+    "id": "265",
+    "name": "Seema Haque, MD",
+    "specialty": "Psychiatry",
+    "city": "Mansfield",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "266",
+    "name": "Seema Kazi, MD",
+    "specialty": "Psychiatry",
+    "city": "Grapevine",
+    "phone": "817-488-8998",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "267",
+    "name": "Shahnaz Saleem, MD",
+    "specialty": "Psychiatry",
+    "city": "Bedford",
+    "phone": "(817) 285-0333",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "268",
+    "name": "Uzma Zaidi, MD",
+    "specialty": "Psychiatry",
+    "city": "Arlington",
+    "phone": "817-200-6680",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "269",
+    "name": "Vidyashree Gowda, MD",
+    "specialty": "Psychiatry",
+    "city": "Denton",
+    "phone": "214-817-4633",
+    "languages": [
+      "English",
+      "Kanada",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "270",
+    "name": "Zohra Khan, MD",
+    "specialty": "Psychiatry",
+    "city": "Euless",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "271",
+    "name": "Mustafa Husain, MD",
+    "specialty": "Psychiatry / Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu",
+      "Spanish"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "272",
+    "name": "Muhanned Abu Hijleh",
+    "specialty": "Pulmonary & Critical Care Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "273",
+    "name": "Sanober Kable, MD",
+    "specialty": "Pulmonology",
+    "city": "Denison / McKinney",
+    "phone": "903-465-5012",
+    "languages": [
+      "English",
+      "Urdu",
+      "Punjabi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "274",
+    "name": "Raquibul Hannan, MD, PhD",
+    "specialty": "Radiation Oncology",
+    "city": "Dallas",
+    "phone": "(214) 645-8525",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "275",
+    "name": "Kanwal Merchant, MD",
+    "specialty": "Radiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "276",
+    "name": "Uma Reddy, MD",
+    "specialty": "Radiology",
+    "city": "Dallas",
+    "phone": "214-838-6440",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "277",
+    "name": "Huma Shujaat, DO",
+    "specialty": "Rheumatology",
+    "city": "Plano",
+    "phone": "469-800-6000",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "278",
+    "name": "Iman Ali, MD",
+    "specialty": "Rheumatology",
+    "city": "Bedford",
+    "phone": "817-685-9490",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "279",
+    "name": "Kasturi Inaganti, MD",
+    "specialty": "Rheumatology",
+    "city": "Garland",
+    "phone": "469-800-2000",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "280",
+    "name": "Pallavi Nandeeshwar, MD",
+    "specialty": "Rheumatology",
+    "city": "McKinney / Frisco",
+    "phone": "972-547-9700",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "281",
+    "name": "Puneet Bajaj, MD, MPH",
+    "specialty": "Rheumatology",
+    "city": "Dallas",
+    "phone": "214-645-6481",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "282",
+    "name": "Rihab Kheir, MD",
+    "specialty": "Rheumatology",
+    "city": "Allen",
+    "phone": "469-640-1229",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "283",
+    "name": "Sana Makhdumi, MD",
+    "specialty": "Rheumatology",
+    "city": "McKinney",
+    "phone": "469-800-5450",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "284",
+    "name": "Sirisha Gokaraju, MD",
+    "specialty": "Rheumatology",
+    "city": "Plano",
+    "phone": "469-659-7232",
+    "languages": [
+      "English",
+      "Hindi",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "285",
+    "name": "Swathi Gonnalagadda, MD",
+    "specialty": "Rheumatology",
+    "city": "Plano",
+    "phone": "469-467-2478",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "286",
+    "name": "Talat Kheshgi, MD",
+    "specialty": "Rheumatology",
+    "city": "Dallas",
+    "phone": "214-540-0700",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "287",
+    "name": "Uzma Syeda, MD",
+    "specialty": "Rheumatology",
+    "city": "Grapevine",
+    "phone": "817-416-7695",
+    "languages": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "288",
+    "name": "Waffiyah Afridi, MD",
+    "specialty": "Rheumatology",
+    "city": "",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "289",
+    "name": "Ravindra Chandrashekhar, MD",
+    "specialty": "Sleep Medicine",
+    "city": "Carrollton / Richardson / Frisco",
+    "phone": "469-501-2224",
+    "languages": [
+      "English",
+      "Kanada"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "290",
+    "name": "Safia Khan, MD",
+    "specialty": "Sleep Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "291",
+    "name": "Venu Parachuri, MD",
+    "specialty": "Sleep Medicine",
+    "city": "Frisco",
+    "phone": "214-817-4633",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "292",
+    "name": "Abdelmohsen Radwanhussien, MD",
+    "specialty": "Radiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "293",
+    "name": "Ahmad Arain, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "294",
+    "name": "Akil Farishta, MD",
+    "specialty": "Anesthesiology & Pain Management",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "295",
+    "name": "Akram Sadeghi, MD",
+    "specialty": "Vascular Surgery",
+    "city": "Dallas",
+    "phone": "(214) 645-7237",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "296",
+    "name": "Ali Baiomy, MD",
+    "specialty": "Radiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "297",
+    "name": "Alireza Eajazi",
+    "specialty": "Radiology",
+    "city": "Dallas",
+    "phone": "(214) 645-9729",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "298",
+    "name": "Amer Shakil",
+    "specialty": "Family Medicine",
+    "city": "Dallas",
+    "phone": "(972) 292-0300",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "299",
+    "name": "Ana Islam, MD",
+    "specialty": "General Surgery, Endocrine Surgery",
+    "city": "Dallas",
+    "phone": "(214) 645-4673",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "300",
+    "name": "Camli Al Sadek, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "301",
+    "name": "Fadeel Mahmood, MD",
+    "specialty": "Physcial medicine and rehab",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "302",
+    "name": "Farida Ali, MD",
+    "specialty": "pediatric psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "303",
+    "name": "Fatemeh Ezzati",
+    "specialty": "Rheumatology",
+    "city": "Dallas",
+    "phone": "(214) 692-3145",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "304",
+    "name": "Firouzeh Arjmandi, MD",
+    "specialty": "breast radiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Parkland Health"
+  },
+  {
+    "id": "305",
+    "name": "Harris Baig, MD",
+    "specialty": "Anesthesiology & Pain Management",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "306",
+    "name": "Hicham Ibrahim",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "(214) 645-8500",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "307",
+    "name": "Ibrahim Ibrahim, MD",
+    "specialty": "Hematology / Oncology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "308",
+    "name": "Imran Mir",
+    "specialty": "Pediatric Hospital Medicine",
+    "city": "Dallas",
+    "phone": "(214) 648-2145",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "309",
+    "name": "Khurram Mazhar, MD",
+    "specialty": "Gastroenterology / Hepatology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "310",
+    "name": "Maha Yousif, MD",
+    "specialty": "Pediatric Endocrinology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "311",
+    "name": "Mahmoud Elsayed, MD",
+    "specialty": "Internal Medicine / Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Parkland Health"
+  },
+  {
+    "id": "312",
+    "name": "Mariam Mir",
+    "specialty": "Pathology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "313",
+    "name": "Marwan Abdulaal, MD",
+    "specialty": "Ophthalmology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "314",
+    "name": "Mazin Altamimi, MD",
+    "specialty": "Neurosurgery",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "315",
+    "name": "Michael Youssef, MD",
+    "specialty": "Neurology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "316",
+    "name": "Mirza Baig, MD",
+    "specialty": "Vascular Surgery",
+    "city": "Dallas",
+    "phone": "(214) 645-0538",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "317",
+    "name": "Mohammed Ahmed, MD",
+    "specialty": "Anesthesiology & Pain Management",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "318",
+    "name": "Mohammed Alshalal, MD",
+    "specialty": "Internal Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "319",
+    "name": "Mustafa Al Arab, DDS",
+    "specialty": "Dentistry, oral and maxillofacial surgery",
+    "city": "Dallas",
+    "phone": "(214) 645-3999",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "320",
+    "name": "Nasir Zaki, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "321",
+    "name": "Navid Sadeghi, MD",
+    "specialty": "Hematology / Oncology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Parkland Health"
+  },
+  {
+    "id": "322",
+    "name": "Nilofar Syed, MD",
+    "specialty": "Rheumatology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "323",
+    "name": "Omaira Azizad, MD",
+    "specialty": "Anesthesiology & Pain Management",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "324",
+    "name": "Osama Aboulfettouh, MD",
+    "specialty": "Anesthesiology & Pain Management",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "325",
+    "name": "Osman Ali, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "326",
+    "name": "Sadia Omar, MD",
+    "specialty": "Obstetrics & Gynecology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "327",
+    "name": "Salwan Almutar, MD",
+    "specialty": "Oncology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "328",
+    "name": "Samaiya Mushtaq, MD",
+    "specialty": "Psychiatry",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "329",
+    "name": "Samer Zaidkaylani, MD",
+    "specialty": "Hematology / Oncology, Pediatrics",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "330",
+    "name": "Samia Farooqi, MD",
+    "specialty": "Emergency Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "331",
+    "name": "Samira Syed",
+    "specialty": "Hematology / Oncology, breast radiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "332",
+    "name": "Sana Siddiqui, MD",
+    "specialty": "Pediatrics / Hospital Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "333",
+    "name": "Sana Ullah, MD",
+    "specialty": "Anesthesiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "334",
+    "name": "Sarah Khan, MD",
+    "specialty": "Internal Medicine, obesity medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "335",
+    "name": "Shahid Hussain, MD",
+    "specialty": "Pediatrics, Anesthesiology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "336",
+    "name": "Syed Mazher, MD",
+    "specialty": "Hematology / Oncology",
+    "city": "Dallas",
+    "phone": "(214) 645-4673",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "337",
+    "name": "Tahir Shaikh, MD",
+    "specialty": "Gastroenterology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "338",
+    "name": "Tamim Hamdi",
+    "specialty": "Nephrology",
+    "city": "Dallas",
+    "phone": "(214) 645-1919",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "339",
+    "name": "Waddah Arafat",
+    "specialty": "Hematology / Oncology",
+    "city": "Dallas",
+    "phone": "(214) 645-4673",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "340",
+    "name": "Waleed Abdellatif, MD",
+    "specialty": "Radiology, Emergency Medicine",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "341",
+    "name": "Zahra Ali, MD",
+    "specialty": "Ophthalmology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "342",
+    "name": "Ziad Elhusseini, MD",
+    "specialty": "Ophthalmology",
+    "city": "Dallas",
+    "phone": "",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "343",
+    "name": "Sai Madhavapeddi, MD",
+    "specialty": "Sports Medicine",
+    "city": "Flower Mound",
+    "phone": "817-668-3222",
+    "languages": [
+      "English",
+      "Hindi",
+      "Telegu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "344",
+    "name": "Farah Khan, MD",
+    "specialty": "Neonatal-Perinatal Medicine",
+    "city": "Dallas",
+    "phone": "(469) 437-5426",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "345",
+    "name": "Fadwa Ali, MD",
+    "specialty": "Surgical Oncology / Colorectal Surgery",
+    "city": "Dallas",
+    "phone": "214-645-4673",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "affiliation": "UT Southwestern"
+  },
+  {
+    "id": "346",
+    "name": "Apurva Modi, MD",
+    "specialty": "Transplant Hepatology / Gastroenterology",
+    "city": "Fort Worth",
+    "phone": "",
+    "languages": [
+      "English",
+      "Hindi",
+      "Gujrati",
+      "Tamil"
+    ],
+    "affiliation": "Baylor Scott and White"
+  },
+  {
+    "id": "347",
+    "name": "Kareem Abdelfattah, MD",
+    "specialty": "Trauma & Critical Care Surgery",
+    "city": "Dallas",
+    "phone": "(469) 604-9160",
+    "languages": [
+      "English"
+    ],
+    "affiliation": "UT Southwestern, Parkland Health"
+  },
+  {
+    "id": "348",
+    "name": "Khalida Yasmin, MD",
+    "specialty": "Family Medicine",
+    "city": "Little Elm",
+    "phone": "972-292-0330",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "349",
+    "name": "Lubna Kamal, MD",
+    "specialty": "Pediatrics",
+    "city": "Garland",
+    "phone": "",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "350",
+    "name": "Naureen Sheikh, MD",
+    "specialty": "Physcial medicine and rehab",
+    "city": "Fort Worth",
+    "phone": "",
+    "languages": [
+      "English",
+      "Spanish",
+      "Arabic",
+      "Punjabi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "351",
+    "name": "Siddharth Jain, MD",
+    "specialty": "Urology",
+    "city": "DeSoto",
+    "phone": "972-780-0480",
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "352",
+    "name": "Atish Chopra, MD",
+    "specialty": "Vascular Surgery",
+    "city": "Fort Worth",
+    "phone": "817-927-0456",
+    "languages": [
+      "English",
+      "Hindi",
+      "Punjabi"
+    ],
+    "affiliation": ""
+  },
+  {
+    "id": "353",
+    "name": "Hina Rizvi, MD, CWS",
+    "specialty": "Wound Care & Hyperbaric",
+    "city": "Plano",
+    "phone": "(972) 491-1200",
+    "languages": [
+      "English"
+    ],
+    "affiliation": ""
+  }
+]

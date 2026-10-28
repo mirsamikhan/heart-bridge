@@ -26,7 +26,7 @@ function ResourcesMenu({ mobile = false, onNavigate }: { mobile?: boolean; onNav
       <div className={mobile ? 'flex flex-col gap-3 pl-4 pt-3' : 'absolute top-full left-0 mt-3 w-60 rounded-xl border border-secondary bg-background shadow-lg p-2 flex flex-col gap-1'}>
         {[
           { to: '/resources/educational-handouts', label: 'Educational Handouts' },
-          { to: '/resources/pcp-search', label: 'PCP Search' },
+          { to: '/resources/pcp-search', label: 'Physician Finder' },
         ].map(item => <Link key={item.to} to={item.to} onClick={onNavigate} aria-current={location.pathname === item.to ? 'page' : undefined} className="font-paragraph text-sm text-primary px-3 py-2 rounded-lg hover:bg-secondary/40 focus-visible:bg-secondary/40">{item.label}</Link>)}
       </div>
     </details>

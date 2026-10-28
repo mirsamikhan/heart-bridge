@@ -36,5 +36,5 @@ it('provides the HEART reminder link and Resources subpages on mobile', () => {
   fireEvent.click(menus[1]);
   const details = menus[1].closest('details')!;
   expect(within(details).getByRole('link', { name: 'Educational Handouts', hidden: true })).toHaveAttribute('href', '/resources/educational-handouts');
-  expect(within(details).getByRole('link', { name: 'PCP Search', hidden: true })).toHaveAttribute('href', '/resources/pcp-search');
+  expect(within(details).getByRole('link', { name: 'Physician Finder', hidden: true })).toHaveAttribute('href', '/resources/pcp-search');
 });
