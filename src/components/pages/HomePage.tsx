@@ -82,7 +82,7 @@ const SLIDESHOW_IMAGES = [
   { src: '/homepage/community-5.jpg', alt: 'Community members practice CPR with training mannequins' },
   { src: '/homepage/community-6.jpg', alt: 'A volunteer prepares a blood pressure cuff for a participant' },
   { src: '/homepage/community-7.jpg', alt: 'DilSe volunteers and community members at an outdoor health screening table' },
-  { src: '/homepage/community-8.jpg', alt: 'Three volunteers at an outdoor UT Southwestern community health outreach table' },
+  { src: '/homepage/community-8.jpg', alt: 'Volunteers at an outdoor health outreach table with the UT Southwestern Medical Center banner visible' },
 ];
 
 export default function HomePage() {
@@ -172,20 +172,6 @@ export default function HomePage() {
                 className="bg-white text-primary hover:bg-secondary hover:text-primary-foreground font-bold text-lg px-7 py-4 h-auto rounded-xl shadow-lg transition-all duration-300"
               >
                 <Link to="/get-screened">Get Screened</Link>
-              </Button>
-              <Button 
-                asChild 
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold text-lg px-7 py-4 h-auto rounded-xl backdrop-blur-sm transition-all duration-300"
-              >
-                <a
-                  href="https://docs.google.com/document/d/15k3qHwJq52_CoqrVDYF_62e0dLcSGColjzrvMeNvbvk/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Volunteer With Us
-                </a>
               </Button>
               <Button
                 asChild

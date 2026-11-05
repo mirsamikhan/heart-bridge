@@ -63,7 +63,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-heading text-2xl text-primary mb-1">Mir Sami Khan</h3>
                 <p className="font-paragraph text-sm text-primary font-semibold mb-3">Founder and Program Director</p>
-                <p className="font-paragraph text-sm text-foreground/75 leading-relaxed">Mir Sami Khan leads the DilSe initiative, bringing vision and expertise to our mission of advancing cardiovascular health in South Asian communities across the Dallas–Fort Worth area.</p>
+                <p className="font-paragraph text-sm text-foreground/75 leading-relaxed">Mir Sami Khan leads the DilSe Program, bringing vision and a passion for community health to our mission of advancing cardiovascular health among South Asian communities across the Dallas–Fort Worth area.</p>
               </div>
             </article>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
