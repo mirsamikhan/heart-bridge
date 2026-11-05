@@ -3,7 +3,7 @@ import { readFile, readdir, access } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 // Use Astro's YAML dependency to read the same frontmatter format as the collection.
 const { load } = createRequire(import.meta.resolve('astro/package.json'))('js-yaml');
-const base = '/heart-bridge/';
+const base = '/';
 const dist = new URL('../dist/', import.meta.url);
 const router = await readFile(new URL('../src/components/Router.tsx', import.meta.url), 'utf8');
 const routes = [...router.matchAll(/path: "([^"]+)"/g)].map(m => m[1])
@@ -12,11 +12,16 @@ for (const route of ['', ...routes]) await access(new URL(`${route ? route + '/'
 const index = await readFile(new URL('index.html', dist), 'utf8');
 assert.equal(await readFile(new URL('404.html', dist), 'utf8'), index);
 assert(index.includes(`${base}logo.png`));
+assert(!index.includes('/heart-bridge/'), 'HTML still contains the old repository base');
 const assets = new URL('_astro/', dist);
 const files = await readdir(assets);
 const code = (await Promise.all(files.filter(file => file.endsWith('.js'))
   .map(file => readFile(new URL(file, assets), 'utf8')))).join('\n');
+assert(!code.includes('/heart-bridge/'), 'Client code still contains the old repository base');
 for (const path of ['logo.png',
+  'officers/harneet-bains-headshot.png', 'officers/samatha-belatur-headshot.png',
+  ...Array.from({ length: 8 }, (_, index) => `homepage/community-${index + 1}.jpg`),
+  'partners/dallas-pediatrics-id-associates.jpg',
   'officers/mir-sami-khan-headshot.png', 'officers/gobinathan-vaseegaran-headshot.png', 'officers/leah-harris-headshot.png',
   'officers/asma-mohammed-headshot.png', 'officers/samaira-srivastva-headshot.png', 'officers/ayesha-sharif-headshot.png']) {
   assert(code.includes(base) && code.includes(`/${path}`), `Missing base-aware asset: ${path}`);
@@ -26,6 +31,7 @@ let fontCount = 0;
 for (const file of files.filter(file => file.endsWith('.css'))) {
   const css = await readFile(new URL(file, assets), 'utf8');
   assert(!css.includes('/public/fonts/'));
+  assert(!css.includes('/heart-bridge/'), 'CSS still contains the old repository base');
   for (const match of css.matchAll(/url\(([^)]+\.woff2)\)/g)) {
     const url = match[1].replace(/['"]/g, '');
     assert(url.startsWith(base), `Font missing base path: ${url}`);
@@ -47,4 +53,4 @@ for (const file of posts.filter(file => file.endsWith('.md'))) {
     await access(page);
   }
 }
-console.log(`Verified route entry points, 404 shell, 7 local images, ${fontCount} font references, and blog deep links.`);
+console.log(`Verified route entry points, 404 shell, local slideshow/leadership/partner images, ${fontCount} font references, and blog deep links.`);

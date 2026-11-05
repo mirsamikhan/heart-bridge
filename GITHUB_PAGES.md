@@ -1,52 +1,70 @@
-# GitHub Pages demo
+# DilSe custom domain deployment
 
-Demo URL: https://mirsamikhan.github.io/heart-bridge/
+Production URL: https://dilseprogram.org/
 
-This project uses Astro 5 and a React Router browser application. `npm run build`
-uses `astro.pages.config.mjs` to produce a static demo in `dist/` with the site
-`https://mirsamikhan.github.io` and base `/heart-bridge/`. The original Wix development
-configuration stays in `astro.config.mjs`; its production build is available as
-`npm run build:wix`.
+`npm run build` uses `astro.pages.config.mjs` to generate a static site in `dist/`
+with site `https://dilseprogram.org` and base `/`. The original local development
+configuration in `astro.config.mjs` is unchanged: use `npm run dev` at the root URL.
 
-## GitHub settings
+## Coordinated launch
 
-1. Open https://github.com/mirsamikhan/heart-bridge/settings/pages.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. If repository Actions are disabled, enable them under **Settings > Actions > General**.
-   Allow the official `actions/*` actions used by the workflow.
-4. Leave **Custom domain** empty. Enable **Enforce HTTPS** if GitHub offers the checkbox.
-5. Commit and push the deployment changes to `main`.
-6. Open **Actions > Deploy demo to GitHub Pages** and wait for both jobs to succeed.
-   The deployment URL appears in **Settings > Pages** and the `github-pages` environment.
-   You can also start the workflow with **Run workflow** after it exists on GitHub.
+Prepare and test this configuration before changing the live domain settings.
+After approval, coordinate the deployment push with the repository administrator.
+The root-domain build replaces the old `/heart-bridge/` deployment; it is not a
+second independently hosted demo.
 
-The workflow runs on each push to `main` and uses the official configure-pages,
-upload-pages-artifact, and deploy-pages actions. No deployment token needs to be
-added as a secret. The deployment job uses the automatic GitHub token and OIDC.
+1. The repository owner should verify `dilseprogram.org` in their GitHub account's
+   Pages settings, adding the exact TXT record GitHub supplies in Porkbun.
+2. In `mirsamikhan/heart-bridge` > Settings > Pages, keep the publishing source as
+   **GitHub Actions**, set Custom domain to **dilseprogram.org**, and save.
+3. Replace only the two Porkbun parking records shown in the supplied screenshot:
+   the apex ALIAS to `pixie.porkbun.com` and wildcard CNAME to `pixie.porkbun.com`.
+   Preserve unrelated mail, verification, and other DNS records.
+4. Add these records in Porkbun (TTL 600 is fine; the apex/root host is `@`, or
+   blank if Porkbun's editor uses a blank host for the root):
+
+   | Type | Host | Value |
+   | --- | --- | --- |
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | CNAME | www | mirsamikhan.github.io |
+
+5. Push the approved root-domain configuration to `main`. Wait for **Deploy demo
+   to GitHub Pages** to succeed. Saving posts through Pages CMS continues to
+   trigger this same deployment.
+6. Wait for the DNS check and certificate issuance in Settings > Pages, then enable
+   **Enforce HTTPS**. DNS changes and HTTPS availability can take up to 24 hours.
+7. Check both https://dilseprogram.org and https://www.dilseprogram.org, including
+   navigation, direct blog post links, uploaded images, fonts, and Resources.
+
+Do not add wildcard DNS records. GitHub Actions deployments do not require a
+CNAME file in the repository. Do not buy another hosting plan or change nameservers.
+
+Official instructions:
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
 ## Local verification
 
 ```sh
-npm ci
+node --test scripts/check-pages-paths.mjs
 npm run build
-npm run preview:pages -- --port 4323
+npm run test:run -- src/lib/blog.test.ts
+npm run preview:pages -- --host 127.0.0.1 --port 4325
 ```
 
-Visit http://localhost:4323/heart-bridge/about/. The build also verifies route files,
-asset URLs, fonts, blog entry points, and the 404 shell. The preview is a temporary
-local server, not the published GitHub demo.
+Visit http://127.0.0.1:4325/ and /about/ (no `/heart-bridge/` prefix).
+The build verifies static route entry points, the 404 shell, slideshow/leadership/
+partner assets, fonts, and blog routes, and rejects the old repository prefix.
+Draft blog posts must not have generated routes. Blog image paths remain
+`/blog-images/...` in Pages CMS and work at the root domain.
 
-Current routes and local Markdown blog posts each get their own `index.html`, so
-refreshes and direct links succeed on GitHub Pages. `404.html` contains the same
-application shell for future dynamic routes; React Router receives the original
-pathname, query, and hash. Unknown URLs still carry GitHub's HTTP 404 status, but
-load the application rather than GitHub's generic error page. `/health-sites`
-continues redirecting to the combined screening page's locations section.
-
-The deployment-only Babel transform prefixes literal and dynamic root-relative image/anchor attributes
-and a Vite transform resolves the existing font URLs without changing page content or styling.
-React Router's basename is set to `/heart-bridge` for the Pages build, so its Link
-and Navigate destinations work without editing each page.
+Routes and published Markdown posts each receive an `index.html` for direct
+links and refreshes. `404.html` contains the same application shell; unknown URLs
+retain HTTP 404 status. `/health-sites` redirects to Get Screened's locations.
+React Router's production basename is `/`. Deployment-only transforms preserve
+root-relative URLs and resolve the existing font references.
 
 ## Wix service limitation
 

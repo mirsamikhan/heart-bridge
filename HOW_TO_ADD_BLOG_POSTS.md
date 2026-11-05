@@ -9,7 +9,7 @@
 7. Turn **Draft on** to save without publishing. When the post is ready to go live, turn **Draft off**.
 8. Click **Save**.
 
-A published post normally goes live a minute or two after saving, once the website finishes rebuilding. Refresh [the blog](https://mirsamikhan.github.io/heart-bridge/blog/) to see it. If the build takes longer or fails, ask the website administrator to check GitHub Actions.
+A published post normally goes live a minute or two after saving, once the website finishes rebuilding. Refresh [the blog](https://dilseprogram.org/blog/) to see it. If the build takes longer or fails, ask the website administrator to check GitHub Actions.
 
 To edit a post, open **Blog Posts**, select it, make your changes, and click **Save**. Turning Draft on also removes an already-published post after the next successful rebuild. The publication date controls ordering; it does not schedule a future release.
 

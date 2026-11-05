@@ -19,3 +19,20 @@ test('Pages URLs preserve external links/hashes and prefix literal and dynamic l
   assert(code.includes(`${name}(photo)`));
   assert(code.includes(`${name}(link)`));
 });
+
+test('custom domain root preserves local URLs without a repository prefix', () => {
+  const { code } = transformSync('const view = <><img src="/logo.png" /><img src={photo} /><a href={link} /><video poster="/videos/poster.jpg" /></>;', {
+    configFile: false, babelrc: false, parserOpts: { plugins: ['jsx'] },
+    plugins: [pagesAttributes('/')],
+  });
+  const helper = code.slice(0, code.indexOf('const view'));
+  const name = /const (\w+) =/.exec(helper)[1];
+  const url = new Function('url', `${helper}; return ${name}(url);`);
+  for (const original of ['/', '/logo.png', '/blog-images/photo.png', '/about?x=1#leadership',
+    '/resources/pcp-search', '#sites', 'https://example.com/a.pdf', '//example.com/a.png',
+    'sms:+18664909361', 'mailto:test@example.com', undefined]) {
+    assert.equal(url(original), original);
+  }
+  assert(code.includes(`${name}(photo)`));
+  assert(code.includes(`${name}(link)`));
+});
