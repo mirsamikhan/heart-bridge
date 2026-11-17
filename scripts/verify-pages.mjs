@@ -23,7 +23,7 @@ for (const path of ['logo.png',
   ...Array.from({ length: 8 }, (_, index) => `homepage/community-${index + 1}.jpg`),
   'partners/dallas-pediatrics-id-associates.jpg',
   'officers/mir-sami-khan-headshot.png', 'officers/gobinathan-vaseegaran-headshot.png', 'officers/leah-harris-headshot.png',
-  'officers/asma-mohammed-headshot.png', 'officers/samaira-srivastva-headshot.png', 'officers/ayesha-sharif-headshot.png']) {
+  'officers/asma-mohammed-headshot.png', 'officers/samaira-srivastva-headshot.png']) {
   assert(code.includes(base) && code.includes(`/${path}`), `Missing base-aware asset: ${path}`);
   await access(new URL(path, dist));
 }

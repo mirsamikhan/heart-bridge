@@ -68,15 +68,14 @@ export default function AboutPage() {
             </article>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'Gobinathan Vaseegaran', role: 'Training Officer', photo: '/officers/gobinathan-vaseegaran-headshot.png' },
+                { name: 'Vasee Gobinathan', role: 'Training Officer', photo: '/officers/gobinathan-vaseegaran-headshot.png' },
                 { name: 'Leah Harris', role: 'Education Officer', photo: '/officers/leah-harris-headshot.png' },
                 { name: 'Asma Mohammed', role: 'Secretary', photo: '/officers/asma-mohammed-headshot.png' },
                 { name: 'Samaira Srivastva', role: 'Administrative Officer', photo: '/officers/samaira-srivastva-headshot.png' },
-                { name: 'Ayesha Sharif', role: 'Scheduling Officer', photo: '/officers/ayesha-sharif-headshot.png' },
                 { name: 'Harneet Bains', role: 'Training Officer', photo: '/officers/harneet-bains-headshot.png' },
                 { name: 'Samatha Belatur', role: 'Community Outreach Officer', photo: '/officers/samatha-belatur-headshot.png' },
               ].map(member => (
-                <article key={member.name} className={`bg-white border border-primary/10 rounded-2xl p-6 text-center shadow-sm ${member.name === 'Samatha Belatur' ? 'lg:col-start-2' : ''}`}>
+                <article key={member.name} className="bg-white border border-primary/10 rounded-2xl p-6 text-center shadow-sm">
                   {member.photo ? (
                     <img src={member.photo} alt={member.name} className="w-48 h-48 mx-auto rounded-xl object-cover mb-4" loading="lazy" />
                   ) : (
@@ -195,31 +194,6 @@ export default function AboutPage() {
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Collaboration Section */}
-      <section className="w-full py-6 md:py-8">
-        <div className="max-w-[100rem] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="font-heading text-3xl md:text-4xl text-primary mb-8 text-center">
-              UT Southwestern Collaboration
-            </h2>
-            <div className="bg-secondary rounded-3xl p-8 md:p-12">
-              <p className="font-paragraph text-base md:text-lg text-foreground leading-relaxed mb-6">
-                DilSe was developed in collaboration with physicians from UT Southwestern Medical Center, one of the nation's premier academic medical institutions. This partnership ensures that our screening protocols, educational materials, and follow-up support are grounded in the latest cardiovascular research and clinical best practices.
-              </p>
-              <p className="font-paragraph text-base md:text-lg text-foreground leading-relaxed">
-                Our program contributes to ongoing public health research and quality improvement initiatives, helping to advance understanding of cardiovascular risk in South Asian populations while providing immediate benefit to our community members.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
